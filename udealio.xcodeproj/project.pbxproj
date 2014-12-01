@@ -10,6 +10,7 @@
 		F72DBB061A282F01007441C6 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F72DBB051A282F01007441C6 /* Launch Screen.storyboard */; };
 		F72DBB091A28372A007441C6 /* EntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F72DBB081A28372A007441C6 /* EntryViewController.swift */; };
 		F72DBB0F1A284194007441C6 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F72DBB0E1A284194007441C6 /* LoginViewController.swift */; };
+		F72DBB111A2848BF007441C6 /* TransitionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F72DBB101A2848BF007441C6 /* TransitionManager.swift */; };
 		F7328D5A1A2571FB002D1A98 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7328D591A2571FB002D1A98 /* AppDelegate.swift */; };
 		F7328D5F1A2571FB002D1A98 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F7328D5D1A2571FB002D1A98 /* Main.storyboard */; };
 		F7328D611A2571FB002D1A98 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F7328D601A2571FB002D1A98 /* Images.xcassets */; };
@@ -38,6 +39,7 @@
 		F72DBB051A282F01007441C6 /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		F72DBB081A28372A007441C6 /* EntryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EntryViewController.swift; sourceTree = "<group>"; };
 		F72DBB0E1A284194007441C6 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		F72DBB101A2848BF007441C6 /* TransitionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransitionManager.swift; sourceTree = "<group>"; };
 		F7328D541A2571FB002D1A98 /* udealio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = udealio.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7328D581A2571FB002D1A98 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F7328D591A2571FB002D1A98 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -97,6 +99,7 @@
 		F72DBB0D1A284127007441C6 /* Login Views */ = {
 			isa = PBXGroup;
 			children = (
+				F72DBB101A2848BF007441C6 /* TransitionManager.swift */,
 				F72DBB081A28372A007441C6 /* EntryViewController.swift */,
 				F72DBB0E1A284194007441C6 /* LoginViewController.swift */,
 			);
@@ -283,6 +286,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F72DBB111A2848BF007441C6 /* TransitionManager.swift in Sources */,
 				F72DBB0F1A284194007441C6 /* LoginViewController.swift in Sources */,
 				F7328D841A25A9F6002D1A98 /* DealsViewController.swift in Sources */,
 				F7328D821A25A9D0002D1A98 /* ProfileViewController.swift in Sources */,
