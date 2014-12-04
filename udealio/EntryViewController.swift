@@ -29,6 +29,11 @@ class EntryViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(true);
+        UIApplication.sharedApplication().statusBarHidden=true; // for status bar hide
+    }
+    
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         
         // this gets a reference to the screen that we're about to transition to
@@ -40,16 +45,11 @@ class EntryViewController: UIViewController {
         
     }
     
-    override func prefersStatusBarHidden() -> Bool {
-        return true
-    }
-    
     @IBAction func loginButtonPressed(sender: UIButton) {
         self.performSegueWithIdentifier("entryToLogin", sender: nil)
     }
 
-    @IBAction func tourButtonPressed(sender: UIButton) {
+    @IBAction func signupButtonPressed(sender: UIButton) {
+        self.performSegueWithIdentifier("entryToSignUpView", sender: nil)
     }
-
-
 }

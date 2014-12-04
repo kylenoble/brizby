@@ -20,6 +20,8 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var backgroundImage: UIImageView!
     @IBOutlet weak var loginTitleLabel: UILabel!
     
+    @IBOutlet weak var innerView: UIView!
+    
     @IBOutlet weak var usernameTextInputField: UITextField!
     @IBOutlet weak var passwordTextInputField: UITextField!
     @IBOutlet weak var twitterLoginButton: UIButton!
@@ -31,6 +33,11 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     var keyboardIsShowing: Bool = false
     weak var activeTextField: UITextField?
     
+    let transitionManager = TransitionManager()
+    
+    var usernameAnchor:CGFloat = 0.0
+    var passwordAnchor:CGFloat = 0.0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -39,21 +46,27 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         usernameTextInputField.delegate = self
         passwordTextInputField.delegate = self
         
+        usernameAnchor = self.usernameTextInputField.center.y - 18
+        passwordAnchor = self.passwordTextInputField.center.y - 21
+        
         switch PhoneSize(rawValue: UIScreen.mainScreen().bounds.height)! {
         case .Four:
             self.backgroundImage.image = UIImage(named: "LoginBG4S")
             self.loginTitleLabel.font = UIFont(name: "Alegreya Sans SC", size: 25.0)
-            addBottomBorder(usernameTextInputField, widthSize: 8.5)
-            addBottomBorder(passwordTextInputField, widthSize: 8.0)
+            addBottomBorder(usernameTextInputField, widthSize: 5.5, yAdjust: 1.5)
+            addBottomBorder(passwordTextInputField, widthSize: 5.0, yAdjust: 1.5)
+            self.loginTitleLabel.font = UIFont(name: "Alegreya Sans SC", size: 25.0)
+            self.usernameTextInputField.font = UIFont(name: "Alegreya Sans", size: 17.0)
+            self.passwordTextInputField.font = UIFont(name: "Alegreya Sans", size: 17.0)
         case .Five:
-            addBottomBorder(usernameTextInputField, widthSize: 8.5)
-            addBottomBorder(passwordTextInputField, widthSize: 8.0)
+            addBottomBorder(usernameTextInputField, widthSize: 2.5, yAdjust: 1.5)
+            addBottomBorder(passwordTextInputField, widthSize: 2.0, yAdjust: 1.5)
         case .SixPlus:
-            addBottomBorder(usernameTextInputField, widthSize: 1.2)
-            addBottomBorder(passwordTextInputField, widthSize: 1.2)
+            addBottomBorder(usernameTextInputField, widthSize: 2.0, yAdjust: 8.5)
+            addBottomBorder(passwordTextInputField, widthSize: 2.0, yAdjust: 8.5)
         default:
-            addBottomBorder(usernameTextInputField, widthSize: 3.5)
-            addBottomBorder(passwordTextInputField, widthSize: 3.5)
+            addBottomBorder(usernameTextInputField, widthSize: 2.5, yAdjust: 6.5)
+            addBottomBorder(passwordTextInputField, widthSize: 2.5, yAdjust: 6.5)
         }
         
         var twitter:UIImage = UIImage(named: "Twitter")!
@@ -96,9 +109,12 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         // Dispose of any resources that can be recreated.
     }
     
-    override func prefersStatusBarHidden() -> Bool {
-        return true
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(true);
+        UIApplication.sharedApplication().statusBarHidden=true; // for status bar hide
     }
+    
+    //Keyboard Functions
     
     override func viewWillDisappear(animated: Bool) {
         super.viewWillDisappear(animated)
@@ -126,26 +142,23 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     {
         var theApp: UIApplication = UIApplication.sharedApplication()
         var windowView: UIView? = theApp.delegate!.window!
-        var textFieldLowerPoint: CGPoint = CGPointMake(self.activeTextField!.frame.origin.x, self.activeTextField!.frame.origin.y + self.activeTextField!.frame.size.height)
-        var convertedTextFieldLowerPoint: CGPoint = self.view.convertPoint(textFieldLowerPoint, toView: windowView)
+        var textFieldLowerPoint: CGPoint = CGPointMake(self.activeTextField!.frame.origin.x, self.activeTextField!.frame.origin.y + self.activeTextField!.frame.size.height + innerView.frame.origin.y)
         var targetTextFieldLowerPoint: CGPoint = CGPointMake(self.activeTextField!.frame.origin.x, self.keyboardFrame.origin.y - kPreferredTextFieldToKeyboardOffset)
-        var targetPointOffset: CGFloat = targetTextFieldLowerPoint.y - convertedTextFieldLowerPoint.y
-        var adjustedViewFrameCenter: CGPoint = CGPointMake(self.view.center.x, self.view.center.y + targetPointOffset)
-        UIView.animateWithDuration(0.2, animations:  {
-            self.view.center = adjustedViewFrameCenter
-        })
+        var targetPointOffset: CGFloat = targetTextFieldLowerPoint.y - textFieldLowerPoint.y
+        if textFieldLowerPoint.y + kPreferredTextFieldToKeyboardOffset > self.keyboardFrame.origin.y {
+            UIView.animateWithDuration(0.2, animations:  {
+                self.usernameTextInputField.frame.origin.y -= (targetPointOffset * -1)
+                self.passwordTextInputField.frame.origin.y -= (targetPointOffset * -1)
+            })
+        }
     }
     
     func returnViewToInitialFrame()
     {
-        var initialViewRect: CGRect = CGRectMake(0.0, 0.0, self.view.frame.size.width, self.view.frame.size.height)
-        
-        if (!CGRectEqualToRect(initialViewRect, self.view.frame))
-        {
-            UIView.animateWithDuration(0.2, animations: {
-                self.view.frame = initialViewRect
-            });
-        }
+        UIView.animateWithDuration(0.2, animations:  {
+            self.usernameTextInputField.center.y = self.usernameAnchor
+            self.passwordTextInputField.center.y = self.passwordAnchor
+        })
     }
     
     override func touchesBegan(touches: NSSet, withEvent event: UIEvent)
@@ -181,6 +194,18 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         }
     }
     
+    //Button Actions
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        
+        // this gets a reference to the screen that we're about to transition to
+        let toViewController = segue.destinationViewController as UIViewController
+        
+        // instead of using the default transition animation, we'll ask
+        // the segue to use our custom TransitionManager object to manage the transition animation
+        toViewController.transitioningDelegate = self.transitionManager
+        
+    }
+    
     @IBAction func twitterLoginButtonPressed(sender: UIButton) {
         println("twitter")
     }
@@ -194,15 +219,20 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func signUpButtonPressed(sender: UIButton) {
+        self.performSegueWithIdentifier("loginToSignUp", sender: nil)
+    }
+    
+    @IBAction func forgotPasswordButtonPressed(sender: UIButton) {
     }
     
     //UI Functions
-    func addBottomBorder(textField:UITextField, widthSize:CGFloat) {
+    
+    func addBottomBorder(textField:UITextField, widthSize:CGFloat, yAdjust:CGFloat) {
         
         var border = CALayer()
         var width = widthSize
         border.borderColor = UIColor.whiteColor().CGColor
-        border.frame = CGRect(x: 0, y: textField.bounds.size.height - width, width: 400, height: textField.bounds.size.height)
+        border.frame = CGRect(x: 0, y: textField.bounds.size.height + yAdjust, width: 400, height: textField.bounds.size.height)
         
         border.borderWidth = width
         textField.layer.addSublayer(border)
@@ -225,7 +255,6 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         }
         
         if direction == "left" {
-            println(self.facebookLoginButton.bounds.size)
             newButton = CGRect(x: xValue, y: 0, width: 20, height: 40)
             shapePath = UIBezierPath(roundedRect: newButton, byRoundingCorners: UIRectCorner.AllCorners, cornerRadii: CGSizeMake(0.0, 0.0))
         }

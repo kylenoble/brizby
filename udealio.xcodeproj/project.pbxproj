@@ -19,10 +19,13 @@
 		F7328D821A25A9D0002D1A98 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7328D811A25A9D0002D1A98 /* ProfileViewController.swift */; };
 		F7328D841A25A9F6002D1A98 /* DealsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7328D831A25A9F6002D1A98 /* DealsViewController.swift */; };
 		F7328D881A25B34B002D1A98 /* TabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7328D871A25B34B002D1A98 /* TabViewController.swift */; };
+		F740CE7E1A2E8C4200C8B14D /* FloatLabelTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = F740CE7C1A2E8C4200C8B14D /* FloatLabelTextField.swift */; };
+		F740CE7F1A2E8C4200C8B14D /* FloatLabelTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F740CE7D1A2E8C4200C8B14D /* FloatLabelTextView.swift */; };
 		F78C881F1A26BCD900494B67 /* AlegreyaSans-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = F78C881D1A26BCD900494B67 /* AlegreyaSans-Medium.otf */; };
 		F78C88201A26BCD900494B67 /* AlegreyaSans-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = F78C881E1A26BCD900494B67 /* AlegreyaSans-Regular.otf */; };
 		F78C88241A26C17100494B67 /* AlegreyaSansSC-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = F78C88221A26C17100494B67 /* AlegreyaSansSC-Regular.otf */; };
 		F78C88261A26C18A00494B67 /* AlegreyaSansSC-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = F78C88251A26C18A00494B67 /* AlegreyaSansSC-Medium.otf */; };
+		F7DDE19F1A2D19310051E0E0 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7DDE19E1A2D19310051E0E0 /* SignUpViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,10 +55,13 @@
 		F7328D811A25A9D0002D1A98 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		F7328D831A25A9F6002D1A98 /* DealsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DealsViewController.swift; sourceTree = "<group>"; };
 		F7328D871A25B34B002D1A98 /* TabViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabViewController.swift; sourceTree = "<group>"; };
+		F740CE7C1A2E8C4200C8B14D /* FloatLabelTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FloatLabelTextField.swift; sourceTree = "<group>"; };
+		F740CE7D1A2E8C4200C8B14D /* FloatLabelTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FloatLabelTextView.swift; sourceTree = "<group>"; };
 		F78C881D1A26BCD900494B67 /* AlegreyaSans-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AlegreyaSans-Medium.otf"; sourceTree = "<group>"; };
 		F78C881E1A26BCD900494B67 /* AlegreyaSans-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AlegreyaSans-Regular.otf"; sourceTree = "<group>"; };
 		F78C88221A26C17100494B67 /* AlegreyaSansSC-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AlegreyaSansSC-Regular.otf"; sourceTree = "<group>"; };
 		F78C88251A26C18A00494B67 /* AlegreyaSansSC-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AlegreyaSansSC-Medium.otf"; sourceTree = "<group>"; };
+		F7DDE19E1A2D19310051E0E0 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +108,7 @@
 				F72DBB101A2848BF007441C6 /* TransitionManager.swift */,
 				F72DBB081A28372A007441C6 /* EntryViewController.swift */,
 				F72DBB0E1A284194007441C6 /* LoginViewController.swift */,
+				F7DDE19E1A2D19310051E0E0 /* SignUpViewController.swift */,
 			);
 			name = "Login Views";
 			sourceTree = "<group>";
@@ -161,6 +168,15 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		F740CE7B1A2E8C4200C8B14D /* FloatLabelFields */ = {
+			isa = PBXGroup;
+			children = (
+				F740CE7C1A2E8C4200C8B14D /* FloatLabelTextField.swift */,
+				F740CE7D1A2E8C4200C8B14D /* FloatLabelTextView.swift */,
+			);
+			path = FloatLabelFields;
+			sourceTree = "<group>";
+		};
 		F78C881A1A26BB6200494B67 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -176,6 +192,7 @@
 		F78C881C1A26BB7A00494B67 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				F740CE7B1A2E8C4200C8B14D /* FloatLabelFields */,
 				F72DBB0D1A284127007441C6 /* Login Views */,
 				F72DBB0C1A284108007441C6 /* Main Views */,
 			);
@@ -289,9 +306,12 @@
 				F72DBB111A2848BF007441C6 /* TransitionManager.swift in Sources */,
 				F72DBB0F1A284194007441C6 /* LoginViewController.swift in Sources */,
 				F7328D841A25A9F6002D1A98 /* DealsViewController.swift in Sources */,
+				F740CE7E1A2E8C4200C8B14D /* FloatLabelTextField.swift in Sources */,
 				F7328D821A25A9D0002D1A98 /* ProfileViewController.swift in Sources */,
 				F7328D801A25A870002D1A98 /* FeedViewController.swift in Sources */,
 				F7328D881A25B34B002D1A98 /* TabViewController.swift in Sources */,
+				F7DDE19F1A2D19310051E0E0 /* SignUpViewController.swift in Sources */,
+				F740CE7F1A2E8C4200C8B14D /* FloatLabelTextView.swift in Sources */,
 				F7328D5A1A2571FB002D1A98 /* AppDelegate.swift in Sources */,
 				F72DBB091A28372A007441C6 /* EntryViewController.swift in Sources */,
 			);

@@ -29,21 +29,27 @@
         <!--Feed View Controller-->
         <scene sceneID="ln5-DL-EoO">
             <objects>
-                <tableViewController id="RGR-O9-vht" customClass="FeedViewController" customModule="udealio" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController clearsSelectionOnViewWillAppear="NO" id="RGR-O9-vht" customClass="FeedViewController" customModule="udealio" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="zFe-zH-atD">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="487"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <view key="tableFooterView" contentMode="scaleToFill" id="CFs-fe-8Vw">
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </view>
                         <connections>
                             <outlet property="dataSource" destination="RGR-O9-vht" id="otp-HL-msh"/>
                             <outlet property="delegate" destination="RGR-O9-vht" id="g1J-z5-N1v"/>
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="cQo-NW-Vnq"/>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1Jh-T3-VSn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1603" y="701"/>
+            <point key="canvasLocation" x="-1603.5" y="700.5"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="NfK-p7-pEs">
