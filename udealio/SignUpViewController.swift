@@ -7,9 +7,13 @@
 //
 
 import UIKit
+import Alamofire
+import SwiftyJSON
 
 class SignUpViewController: UIViewController, UITextFieldDelegate {
 
+    let transitionManager = TransitionManager()
+    
     @IBOutlet weak var innerView: UIView!
     @IBOutlet weak var backgroundImage: UIImageView!
     
@@ -24,8 +28,6 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var usernameTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var emailTextField: UITextField!
-    @IBOutlet weak var nameTextField: UITextField!
-    @IBOutlet weak var cityTextField: UITextField!
     
     var kPreferredTextFieldToKeyboardOffset: CGFloat = 20.0
     var keyboardFrame: CGRect = CGRect.nullRect
@@ -35,8 +37,6 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
     var usernameAnchor:CGFloat = 0.0
     var passwordAnchor:CGFloat = 0.0
     var emailAnchor:CGFloat = 0.0
-    var nameAnchor:CGFloat = 0.0
-    var cityAnchor:CGFloat = 0.0
     var photoAnchor:CGFloat = 0.0
     
     //var highestIncrease:CGFloat = 0
@@ -48,18 +48,14 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
         usernameTextField.delegate = self
         passwordTextField.delegate = self
         emailTextField.delegate = self
-        nameTextField.delegate = self
-        cityTextField.delegate = self
         
         usernameAnchor = self.usernameTextField.center.y - 18
         passwordAnchor = self.passwordTextField.center.y - 21
         emailAnchor = self.emailTextField.center.y - 24
-        nameAnchor = self.nameTextField.center.y - 27
-        cityAnchor = self.cityTextField.center.y - 30
         photoAnchor = self.addProfImageButton.center.y - 21
         
 
-        var fields:[UITextField] = [usernameTextField!, passwordTextField!, emailTextField!, nameTextField!, cityTextField!]
+        var fields:[UITextField] = [usernameTextField!, passwordTextField!, emailTextField!]
         
         switch PhoneSize(rawValue: UIScreen.mainScreen().bounds.height)! {
         case .Four:
@@ -68,8 +64,6 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
             self.usernameTextField.font = UIFont(name: "Alegreya Sans", size: 18.0)
             self.passwordTextField.font = UIFont(name: "Alegreya Sans", size: 18.0)
             self.emailTextField.font = UIFont(name: "Alegreya Sans", size: 18.0)
-            self.nameTextField.font = UIFont(name: "Alegreya Sans", size: 18.0)
-            self.cityTextField.font = UIFont(name: "Alegreya Sans", size: 18.0)
             for field in fields {
                 addBottomBorder(field, widthSize: 1.5)
             }
@@ -110,8 +104,6 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
         usernameTextField.attributedPlaceholder = NSAttributedString(string: "Username", attributes: attributesDictionary)
         passwordTextField.attributedPlaceholder = NSAttributedString(string: "Password", attributes: attributesDictionary)
         emailTextField.attributedPlaceholder = NSAttributedString(string: "Email", attributes: attributesDictionary)
-        nameTextField.attributedPlaceholder = NSAttributedString(string: "Full Name", attributes: attributesDictionary)
-        cityTextField.attributedPlaceholder = NSAttributedString(string: "Home City", attributes: attributesDictionary)
 
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "keyboardWillShow:", name: UIKeyboardWillShowNotification, object: nil)
         
@@ -216,16 +208,11 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
         var targetTextFieldLowerPoint: CGPoint = CGPointMake(self.activeTextField!.frame.origin.x, self.keyboardFrame.origin.y - kPreferredTextFieldToKeyboardOffset)
         var targetPointOffset: CGFloat = targetTextFieldLowerPoint.y - textFieldLowerPoint.y
         
-//        if targetPointOffset < highestIncrease {
-//            highestIncrease = targetPointOffset
-//        }
         if textFieldLowerPoint.y + kPreferredTextFieldToKeyboardOffset > self.keyboardFrame.origin.y {
             UIView.animateWithDuration(0.2, animations:  {
                 self.usernameTextField.frame.origin.y -= (targetPointOffset * -1)
                 self.passwordTextField.frame.origin.y -= (targetPointOffset * -1)
                 self.emailTextField.frame.origin.y -= (targetPointOffset * -1)
-                self.nameTextField.frame.origin.y -= (targetPointOffset * -1)
-                self.cityTextField.frame.origin.y -= (targetPointOffset * -1)
                 self.addProfImageButton.frame.origin.y -= (targetPointOffset * -1)
                 if targetPointOffset < -10.0 {
                     self.signupTitleLabel.hidden = true
@@ -267,17 +254,10 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
         
         
         if textField == self.usernameTextField {
-            println("username")
             self.passwordTextField.becomeFirstResponder()
         }
         else if textField == self.passwordTextField {
             self.emailTextField.becomeFirstResponder()
-        }
-        else if textField == self.emailTextField {
-            self.nameTextField.becomeFirstResponder()
-        }
-        else if textField == self.nameTextField {
-            self.cityTextField.becomeFirstResponder()
         }
         else {
             textField.resignFirstResponder()
@@ -302,10 +282,56 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
             self.usernameTextField.center.y = self.usernameAnchor
             self.passwordTextField.center.y = self.passwordAnchor
             self.emailTextField.center.y = self.emailAnchor
-            self.nameTextField.center.y = self.nameAnchor
-            self.cityTextField.center.y = self.cityAnchor
             self.addProfImageButton.center.y = self.photoAnchor + 4
         })
+    }
+    
+    //Button Actions
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        
+        // this gets a reference to the screen that we're about to transition to
+        let toViewController = segue.destinationViewController as UIViewController
+        
+        // instead of using the default transition animation, we'll ask
+        // the segue to use our custom TransitionManager object to manage the transition animation
+        toViewController.transitioningDelegate = self.transitionManager
+        
+    }
+    
+    @IBAction func signupButtonPressed(sender: UIButton) {
+
+        let spinner = UIActivityIndicatorView(activityIndicatorStyle: UIActivityIndicatorViewStyle.WhiteLarge)
+
+        spinner.startAnimating()
+        spinner.center = self.view.center
+        self.view.addSubview(spinner)
+ 
+        
+        var myJSON: SwiftyJSON.JSON?
+        Alamofire.request(User.Router.SignUp(emailTextField.text, passwordTextField.text, usernameTextField.text)).responseJSON {
+            (_, _, object, _) in
+            
+            myJSON = SwiftyJSON.JSON(object!)
+            
+            if let code = myJSON?["state"]["code"] {
+                if code == 0 {
+                    println("segue")
+                    println(myJSON!)
+//                    NSUserDefaults.standardUserDefaults().setObject(myJSON!, forKey: kEmailKey)
+//                    NSUserDefaults.standardUserDefaults().setObject(myJSON!, forKey: kAuthTokenKey)
+                    NSUserDefaults.standardUserDefaults().synchronize()
+
+                    self.performSegueWithIdentifier("signupToOnboardingView", sender: nil)
+                }
+                else {
+                    println(myJSON!["state"]["messages"][0])
+                }
+            }
+            else {
+                println("error. could not complete request")
+            }
+        }
     }
     
 }

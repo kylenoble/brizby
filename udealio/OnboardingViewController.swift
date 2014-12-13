@@ -1,36 +1,26 @@
 //
-//  EntryViewController.swift
+//  OnboardingViewController.swift
 //  udealio
 //
-//  Created by Kyle Noble on 11/27/14.
+//  Created by Kyle Noble on 12/8/14.
 //  Copyright (c) 2014 udealio. All rights reserved.
 //
 
 import UIKit
 
-class EntryViewController: UIViewController {
+class OnboardingViewController: UIViewController {
 
-    @IBOutlet weak var backgroundImage: UIImageView!
-    
     let transitionManager = TransitionManager()
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        if UIScreen.mainScreen().bounds.height == 480 {
-            self.backgroundImage.image = UIImage(named: "EntryBG4S")
-        }
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
-    }
-    
-    override func viewWillAppear(animated: Bool) {
-        super.viewWillAppear(true);
-        UIApplication.sharedApplication().statusBarHidden=true; // for status bar hide
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
@@ -43,12 +33,10 @@ class EntryViewController: UIViewController {
         toViewController.transitioningDelegate = self.transitionManager
         
     }
-    
-    @IBAction func loginButtonPressed(sender: UIButton) {
-        self.performSegueWithIdentifier("entryToLogin", sender: nil)
-    }
 
-    @IBAction func signupButtonPressed(sender: UIButton) {
-        self.performSegueWithIdentifier("entryToSignUpView", sender: nil)
+    @IBAction func getStartedButtonPressed(sender: UIButton) {
+        self.performSegueWithIdentifier("onboardingToHomeScreen", sender: nil)
     }
+    
+
 }

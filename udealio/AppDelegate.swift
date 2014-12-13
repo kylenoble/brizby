@@ -8,6 +8,9 @@
 
 import UIKit
 
+let kEmailKey = "emailKey"
+let kAuthTokenKey = "authTokenKey"
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 

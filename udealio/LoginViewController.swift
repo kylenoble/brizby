@@ -14,6 +14,8 @@ enum PhoneSize: CGFloat {
 }
 
 import UIKit
+import Alamofire
+import SwiftyJSON
 
 class LoginViewController: UIViewController, UITextFieldDelegate {
 
@@ -207,15 +209,59 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func twitterLoginButtonPressed(sender: UIButton) {
-        println("twitter")
     }
     
     
     @IBAction func facebookLoginButtonPressed(sender: UIButton) {
-        println("facebook")
     }
     
     @IBAction func loginButtonPressed(sender: UIButton) {
+        let spinner = UIActivityIndicatorView(activityIndicatorStyle: UIActivityIndicatorViewStyle.WhiteLarge)
+        
+        spinner.startAnimating()
+        spinner.center = self.view.center
+        self.view.addSubview(spinner)
+        
+        var msg = ""
+        
+        var alert = UIAlertView(title: "Success!", message: msg, delegate: nil, cancelButtonTitle: "Okay.")
+        
+        var myJSON: SwiftyJSON.JSON?
+        Alamofire.request(User.Router.SignIn(usernameTextInputField.text, passwordTextInputField.text)).responseJSON {
+            (_, _, object, _) in
+            
+            myJSON = SwiftyJSON.JSON(object!)
+            println(myJSON!)
+            
+            
+            if let message = myJSON?["message"] {
+                if message == "Logged in" {
+                    
+                    let token = myJSON!["auth-token"].string
+                    let email = myJSON!["email"].string
+                    
+                    NSUserDefaults.standardUserDefaults().setObject(token, forKey: kAuthTokenKey)
+                    NSUserDefaults.standardUserDefaults().setObject(email, forKey: kEmailKey)
+                    NSUserDefaults.standardUserDefaults().synchronize()
+                    
+                    println("segue")
+                    self.performSegueWithIdentifier("loginToHomeView", sender: nil)
+                }
+                else {
+                    spinner.stopAnimating()
+                    alert.title = "Failed"
+                    alert.message = myJSON!["error"].string
+                    alert.show()
+                }
+            }
+            else {
+                alert.title = "Failed"
+                alert.message = myJSON!["error"].string
+                alert.show()
+                spinner.stopAnimating()
+            }
+        }
+        
     }
     
     @IBAction func signUpButtonPressed(sender: UIButton) {
