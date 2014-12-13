@@ -10,8 +10,8 @@ import Foundation
 import UIKit
 import Alamofire
 
-let emailSavedFromNSUserDefaults = NSUserDefaults.standardUserDefaults().objectForKey(kEmailKey) as String
-let authTokenSavedFromNSUserDefaults = NSUserDefaults.standardUserDefaults().objectForKey(kAuthTokenKey) as String
+let emailSavedFromNSUserDefaults = NSUserDefaults.standardUserDefaults().objectForKey(kEmailKey) as? String
+let authTokenSavedFromNSUserDefaults = NSUserDefaults.standardUserDefaults().objectForKey(kAuthTokenKey) as? String
 
 struct User {
     enum Router: URLRequestConvertible {
@@ -19,7 +19,7 @@ struct User {
         
         case SignUp(String, String, String)
         case SignIn(String, String)
-        case SignOut(String, String)
+        case SignOut()
         
         var URLRequest: NSURLRequest {
             let (path: String, parameters: [String: AnyObject], method: String) = {
@@ -43,7 +43,7 @@ struct User {
                     ]
                     let method = "POST"
                     return ("/users/sign_in.json", parameters, method)
-                case .SignOut(let email, let auth_token):
+                case .SignOut():
                     let method = "DELETE"
                     let parameters = ["users":[]]
                     return ("/users/sign_out.json", parameters, method)
@@ -58,6 +58,8 @@ struct User {
             URLRequest.setValue("application/json", forHTTPHeaderField: "Accept")
             
             if method == "DELETE" {
+                println(authTokenSavedFromNSUserDefaults)
+                println(emailSavedFromNSUserDefaults)
                 URLRequest.setValue(authTokenSavedFromNSUserDefaults, forHTTPHeaderField: "X-User-Token")
                 URLRequest.setValue(emailSavedFromNSUserDefaults, forHTTPHeaderField: "X-User-Email")
             }

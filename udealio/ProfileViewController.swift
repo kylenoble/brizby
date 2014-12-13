@@ -7,9 +7,13 @@
 //
 
 import UIKit
+import AlamoFire
+import SwiftyJSON
 
 class ProfileViewController: UITableViewController {
 
+    let transitionManager = TransitionManager()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -49,7 +53,50 @@ class ProfileViewController: UITableViewController {
         // Return the number of rows in the section.
         return 0
     }
-
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        
+        // this gets a reference to the screen that we're about to transition to
+        let toViewController = segue.destinationViewController as UIViewController
+        
+        // instead of using the default transition animation, we'll ask
+        // the segue to use our custom TransitionManager object to manage the transition animation
+        toViewController.transitioningDelegate = self.transitionManager
+        
+    }
+    
+    @IBAction func logOutButtonPressed(sender: UIButton) {
+        var msg = ""
+        var alert = UIAlertView(title: "Success!", message: msg, delegate: nil, cancelButtonTitle: "Okay.")
+        
+        var myJSON: SwiftyJSON.JSON?
+        Alamofire.request(User.Router.SignOut()).responseJSON {
+            (_, _, object, _) in
+            
+            myJSON = SwiftyJSON.JSON(object!)
+            println(myJSON?)
+            
+            
+            if let message = myJSON?["message"] {
+                if message == "Logged out successfully." {
+                    
+                    println("segue")
+                    self.performSegueWithIdentifier("logoutToLoginScreen", sender: nil)
+                }
+                else {
+                    alert.title = "Error"
+                    alert.message = myJSON!["error"].string
+                    alert.show()
+                }
+            }
+            else {
+                alert.title = "Error"
+                alert.message = myJSON!["error"].string
+                alert.show()
+            }
+        }
+    }
+    
     /*
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath) as UITableViewCell

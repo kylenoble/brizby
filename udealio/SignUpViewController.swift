@@ -307,6 +307,8 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
         spinner.center = self.view.center
         self.view.addSubview(spinner)
  
+        var msg = ""
+        var alert = UIAlertView(title: "Success!", message: msg, delegate: nil, cancelButtonTitle: "Okay.")
         
         var myJSON: SwiftyJSON.JSON?
         Alamofire.request(User.Router.SignUp(emailTextField.text, passwordTextField.text, usernameTextField.text)).responseJSON {
@@ -325,11 +327,19 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
                     self.performSegueWithIdentifier("signupToOnboardingView", sender: nil)
                 }
                 else {
-                    println(myJSON!["state"]["messages"][0])
+                    spinner.stopAnimating()
+                    alert.title = "Error"
+                    alert.message = myJSON!["error"].string
+                    alert.show()
+
                 }
             }
             else {
-                println("error. could not complete request")
+                spinner.stopAnimating()
+                alert.title = "Error"
+                alert.message = myJSON!["error"].string
+                alert.show()
+
             }
         }
     }

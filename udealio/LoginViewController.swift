@@ -237,25 +237,34 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
             if let message = myJSON?["message"] {
                 if message == "Logged in" {
                     
-                    let token = myJSON!["auth-token"].string
+                    let token = myJSON!["auth_token"].string
                     let email = myJSON!["email"].string
+                    
+                    println(myJSON!["auth_token"])
+                    println(email)
                     
                     NSUserDefaults.standardUserDefaults().setObject(token, forKey: kAuthTokenKey)
                     NSUserDefaults.standardUserDefaults().setObject(email, forKey: kEmailKey)
                     NSUserDefaults.standardUserDefaults().synchronize()
+                    
+                    let emailSavedFromNSUserDefaults = NSUserDefaults.standardUserDefaults().objectForKey(kEmailKey) as? String
+                    let authTokenSavedFromNSUserDefaults = NSUserDefaults.standardUserDefaults().objectForKey(kAuthTokenKey) as? String
+                    
+                    println(authTokenSavedFromNSUserDefaults)
+                    println(emailSavedFromNSUserDefaults)
                     
                     println("segue")
                     self.performSegueWithIdentifier("loginToHomeView", sender: nil)
                 }
                 else {
                     spinner.stopAnimating()
-                    alert.title = "Failed"
+                    alert.title = "Error"
                     alert.message = myJSON!["error"].string
                     alert.show()
                 }
             }
             else {
-                alert.title = "Failed"
+                alert.title = "Error"
                 alert.message = myJSON!["error"].string
                 alert.show()
                 spinner.stopAnimating()

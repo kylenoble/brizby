@@ -1478,7 +1478,7 @@ to our Terms of Service</string>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1Jh-T3-VSn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1603" y="701"/>
+            <point key="canvasLocation" x="-1123.5" y="1645"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="NfK-p7-pEs">
@@ -1498,22 +1498,79 @@ to our Terms of Service</string>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eYO-io-97f" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2577" y="823"/>
+            <point key="canvasLocation" x="-2301" y="1727"/>
         </scene>
         <!--Profile View Controller-->
         <scene sceneID="zZR-xD-T7J">
             <objects>
                 <tableViewController id="Mfb-tv-MOn" customClass="ProfileViewController" customModule="udealio" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="5FD-y9-uif">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="92" sectionHeaderHeight="22" sectionFooterHeight="22" id="5FD-y9-uif">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="487"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <view key="tableFooterView" contentMode="scaleToFill" id="lAi-Ux-Yia">
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jPy-QN-byo">
+                                    <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                    <color key="backgroundColor" red="0.35294118520000001" green="0.52941179279999995" blue="0.8980392814" alpha="1" colorSpace="deviceRGB"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" secondItem="jPy-QN-byo" secondAttribute="height" multiplier="41:15" id="Aji-hZ-Ca3"/>
+                                    </constraints>
+                                    <color key="tintColor" red="0.35294118520000001" green="0.52941179279999995" blue="0.8980392814" alpha="1" colorSpace="deviceRGB"/>
+                                    <state key="normal" title="Log Out">
+                                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    </state>
+                                    <variation key="default">
+                                        <mask key="constraints">
+                                            <exclude reference="Aji-hZ-Ca3"/>
+                                        </mask>
+                                    </variation>
+                                    <variation key="widthClass=compact">
+                                        <mask key="constraints">
+                                            <include reference="Aji-hZ-Ca3"/>
+                                        </mask>
+                                    </variation>
+                                    <connections>
+                                        <action selector="logOutButtonPressed:" destination="Mfb-tv-MOn" eventType="touchUpInside" id="NMN-Ht-nlG"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="centerY" secondItem="jPy-QN-byo" secondAttribute="centerY" constant="-1" id="ZAw-fK-ufh"/>
+                                <constraint firstAttribute="centerX" secondItem="jPy-QN-byo" secondAttribute="centerX" id="r99-2V-yzN"/>
+                            </constraints>
+                            <variation key="default">
+                                <mask key="subviews">
+                                    <exclude reference="jPy-QN-byo"/>
+                                </mask>
+                                <mask key="constraints">
+                                    <exclude reference="ZAw-fK-ufh"/>
+                                    <exclude reference="r99-2V-yzN"/>
+                                </mask>
+                            </variation>
+                            <variation key="widthClass=compact">
+                                <mask key="subviews">
+                                    <include reference="jPy-QN-byo"/>
+                                </mask>
+                                <mask key="constraints">
+                                    <include reference="ZAw-fK-ufh"/>
+                                    <include reference="r99-2V-yzN"/>
+                                </mask>
+                            </variation>
+                        </view>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="Gv1-w5-v8Y">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="92" id="Gv1-w5-v8Y">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Gv1-w5-v8Y" id="ZzB-C2-A5e">
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="iVI-nU-jvg" kind="showDetail" identifier="logoutToLoginScreen" id="faa-3q-S5J"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -1526,7 +1583,7 @@ to our Terms of Service</string>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wFY-JG-Dfk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1337" y="1627"/>
+            <point key="canvasLocation" x="-1440" y="734"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="2xz-hh-Kb5">
@@ -1546,7 +1603,7 @@ to our Terms of Service</string>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="09c-0w-xkU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2333" y="1650"/>
+            <point key="canvasLocation" x="-2490" y="650"/>
         </scene>
         <!--Deals View Controller-->
         <scene sceneID="Cn6-6I-Usz">
@@ -1633,6 +1690,7 @@ to our Terms of Service</string>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="X5z-aK-UXA"/>
+        <segue reference="faa-3q-S5J"/>
         <segue reference="Z3P-62-cEw"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.0" green="0.7843137255" blue="0.32156862749999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
