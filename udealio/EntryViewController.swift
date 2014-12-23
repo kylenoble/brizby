@@ -48,7 +48,7 @@ class EntryViewController: UIViewController {
         self.performSegueWithIdentifier("entryToLogin", sender: nil)
     }
 
-    @IBAction func signupButtonPressed(sender: UIButton) {
-        self.performSegueWithIdentifier("entryToSignUpView", sender: nil)
+    @IBAction func businessLoginButtonPressed(sender: UIButton) {
+        self.performSegueWithIdentifier("entryToBusinessLogin", sender: nil)
     }
 }

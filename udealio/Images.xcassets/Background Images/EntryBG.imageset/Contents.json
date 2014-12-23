@@ -3,7 +3,7 @@
     {
       "idiom" : "iphone",
       "scale" : "1x",
-      "filename" : "Entry screen@1x.png"
+      "filename" : "Entry screen@2x-1.png"
     },
     {
       "idiom" : "iphone",
@@ -12,7 +12,7 @@
     },
     {
       "idiom" : "iphone",
-      "filename" : "Entry screen@2x-1.png",
+      "filename" : "Entry screen@2x.png",
       "subtype" : "retina4",
       "scale" : "2x"
     },

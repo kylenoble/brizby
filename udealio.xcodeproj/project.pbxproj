@@ -32,6 +32,8 @@
 		F79B75201A34DF6700DAEE4C /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = F79B751F1A34DF6700DAEE4C /* User.swift */; };
 		F7D9905D1A368E7300368A0B /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7D9905C1A368E7300368A0B /* OnboardingViewController.swift */; };
 		F7DDE19F1A2D19310051E0E0 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7DDE19E1A2D19310051E0E0 /* SignUpViewController.swift */; };
+		F7E4F6511A49115E00C3A2D2 /* BusinessLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7E4F6501A49115E00C3A2D2 /* BusinessLoginViewController.swift */; };
+		F7E4F6571A49147400C3A2D2 /* Business.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7E4F6561A49147400C3A2D2 /* Business.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -143,6 +145,8 @@
 		F79B751F1A34DF6700DAEE4C /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		F7D9905C1A368E7300368A0B /* OnboardingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		F7DDE19E1A2D19310051E0E0 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		F7E4F6501A49115E00C3A2D2 /* BusinessLoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BusinessLoginViewController.swift; sourceTree = "<group>"; };
+		F7E4F6561A49147400C3A2D2 /* Business.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Business.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -200,6 +204,7 @@
 				F72DBB101A2848BF007441C6 /* TransitionManager.swift */,
 				F72DBB081A28372A007441C6 /* EntryViewController.swift */,
 				F72DBB0E1A284194007441C6 /* LoginViewController.swift */,
+				F7E4F6501A49115E00C3A2D2 /* BusinessLoginViewController.swift */,
 				F7DDE19E1A2D19310051E0E0 /* SignUpViewController.swift */,
 				F7D9905C1A368E7300368A0B /* OnboardingViewController.swift */,
 			);
@@ -310,6 +315,7 @@
 			isa = PBXGroup;
 			children = (
 				F79B751F1A34DF6700DAEE4C /* User.swift */,
+				F7E4F6561A49147400C3A2D2 /* Business.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -479,6 +485,7 @@
 				F7D9905D1A368E7300368A0B /* OnboardingViewController.swift in Sources */,
 				F72DBB111A2848BF007441C6 /* TransitionManager.swift in Sources */,
 				F72DBB0F1A284194007441C6 /* LoginViewController.swift in Sources */,
+				F7E4F6571A49147400C3A2D2 /* Business.swift in Sources */,
 				F7328D841A25A9F6002D1A98 /* DealsViewController.swift in Sources */,
 				F740CE7E1A2E8C4200C8B14D /* FloatLabelTextField.swift in Sources */,
 				F7328D821A25A9D0002D1A98 /* ProfileViewController.swift in Sources */,
@@ -486,6 +493,7 @@
 				F7328D881A25B34B002D1A98 /* TabViewController.swift in Sources */,
 				F7DDE19F1A2D19310051E0E0 /* SignUpViewController.swift in Sources */,
 				F79B75201A34DF6700DAEE4C /* User.swift in Sources */,
+				F7E4F6511A49115E00C3A2D2 /* BusinessLoginViewController.swift in Sources */,
 				F740CE7F1A2E8C4200C8B14D /* FloatLabelTextView.swift in Sources */,
 				F7328D5A1A2571FB002D1A98 /* AppDelegate.swift in Sources */,
 				F72DBB091A28372A007441C6 /* EntryViewController.swift in Sources */,

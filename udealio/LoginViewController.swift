@@ -65,7 +65,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
             addBottomBorder(passwordTextInputField, widthSize: 2.0, yAdjust: 1.5)
         case .SixPlus:
             addBottomBorder(usernameTextInputField, widthSize: 2.0, yAdjust: 8.5)
-            addBottomBorder(passwordTextInputField, widthSize: 2.0, yAdjust: 8.5)
+            addBottomBorder(passwordTextInputField, widthSize: 2.0, yAdjust: 10.5)
         default:
             addBottomBorder(usernameTextInputField, widthSize: 2.5, yAdjust: 6.5)
             addBottomBorder(passwordTextInputField, widthSize: 2.5, yAdjust: 6.5)
