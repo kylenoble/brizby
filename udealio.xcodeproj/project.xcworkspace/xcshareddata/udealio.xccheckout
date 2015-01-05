@@ -22,11 +22,11 @@
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>67620B5EFA902936DF04070AF595B76AB0333747</key>
-		<string>../..Alamofire/</string>
+		<string>../..Alamofire</string>
 		<key>C0D653E50EFB2F6A86ECA063ED335405B8A1771D</key>
 		<string>../..</string>
 		<key>C861FC00CEE0F6A6BE81FCFF6785FAA78C58EBB3</key>
-		<string>../..SwiftyJSON/</string>
+		<string>../..SwiftyJSON</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>https://github.com/kylenoble/udealio.git</string>
@@ -40,9 +40,17 @@
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>C0D653E50EFB2F6A86ECA063ED335405B8A1771D</string>
+			<key>IDESourceControlWCCName</key>
+			<string>udealio</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
 			<string>67620B5EFA902936DF04070AF595B76AB0333747</string>
 			<key>IDESourceControlWCCName</key>
-			<string>Alamofire</string>
+			<string>udealioAlamofire</string>
 		</dict>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
@@ -50,15 +58,7 @@
 			<key>IDESourceControlWCCIdentifierKey</key>
 			<string>C861FC00CEE0F6A6BE81FCFF6785FAA78C58EBB3</string>
 			<key>IDESourceControlWCCName</key>
-			<string>SwiftyJSON</string>
-		</dict>
-		<dict>
-			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
-			<string>public.vcs.git</string>
-			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>C0D653E50EFB2F6A86ECA063ED335405B8A1771D</string>
-			<key>IDESourceControlWCCName</key>
-			<string>udealio</string>
+			<string>udealioSwiftyJSON</string>
 		</dict>
 	</array>
 </dict>

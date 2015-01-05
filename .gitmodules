@@ -4,3 +4,6 @@
 [submodule "SwiftyJSON"]
 	path = SwiftyJSON
 	url = https://github.com/SwiftyJSON/SwiftyJSON
+[submodule "force"]
+	path = force
+	url = https://github.com/Alamofire/Alamofire.git
