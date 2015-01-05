@@ -14,8 +14,6 @@
 		<string>https://github.com/Alamofire/Alamofire.git</string>
 		<key>C0D653E50EFB2F6A86ECA063ED335405B8A1771D</key>
 		<string>https://github.com/kylenoble/udealio.git</string>
-		<key>C861FC00CEE0F6A6BE81FCFF6785FAA78C58EBB3</key>
-		<string>https://github.com/SwiftyJSON/SwiftyJSON</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>udealio.xcodeproj</string>
@@ -25,8 +23,6 @@
 		<string>../..Alamofire</string>
 		<key>C0D653E50EFB2F6A86ECA063ED335405B8A1771D</key>
 		<string>../..</string>
-		<key>C861FC00CEE0F6A6BE81FCFF6785FAA78C58EBB3</key>
-		<string>../..SwiftyJSON</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>https://github.com/kylenoble/udealio.git</string>
@@ -51,14 +47,6 @@
 			<string>67620B5EFA902936DF04070AF595B76AB0333747</string>
 			<key>IDESourceControlWCCName</key>
 			<string>udealioAlamofire</string>
-		</dict>
-		<dict>
-			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
-			<string>public.vcs.git</string>
-			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>C861FC00CEE0F6A6BE81FCFF6785FAA78C58EBB3</string>
-			<key>IDESourceControlWCCName</key>
-			<string>udealioSwiftyJSON</string>
 		</dict>
 	</array>
 </dict>
