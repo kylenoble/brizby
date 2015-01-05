@@ -2505,8 +2505,8 @@ to our Terms of Service</string>
         <image name="SignUp" width="375" height="667"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Pxn-E2-vdC"/>
         <segue reference="Z3P-62-cEw"/>
+        <segue reference="Pxn-E2-vdC"/>
         <segue reference="JsC-D5-XWE"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.0" green="0.7843137255" blue="0.32156862749999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
