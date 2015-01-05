@@ -1821,8 +1821,7 @@ to our Terms of Service</string>
                                         <exclude reference="dpy-sU-8la"/>
                                     </mask>
                                 </variation>
-                                <variation key="widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="16" y="417" width="184" height="40"/>
+                                <variation key="widthClass=compact">
                                     <mask key="constraints">
                                         <include reference="Ar6-dQ-gwA"/>
                                         <exclude reference="dpy-sU-8la"/>
@@ -1850,8 +1849,7 @@ to our Terms of Service</string>
                                         <exclude reference="iO8-5c-sqX"/>
                                     </mask>
                                 </variation>
-                                <variation key="widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="16" y="479" width="368" height="40"/>
+                                <variation key="widthClass=compact">
                                     <mask key="constraints">
                                         <exclude reference="AbW-y0-8n3"/>
                                         <include reference="iO8-5c-sqX"/>
@@ -1914,8 +1912,7 @@ to our Terms of Service</string>
                                         <exclude reference="wtR-Kw-Qfe"/>
                                     </mask>
                                 </variation>
-                                <variation key="widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="139" y="540" width="148" height="40"/>
+                                <variation key="widthClass=compact">
                                     <mask key="constraints">
                                         <include reference="43c-rO-rbc"/>
                                         <exclude reference="4ZT-NZ-ByQ"/>
@@ -1947,8 +1944,7 @@ to our Terms of Service</string>
                                         <exclude reference="Xl7-5u-tbS"/>
                                     </mask>
                                 </variation>
-                                <variation key="widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="200" y="417" width="184" height="40"/>
+                                <variation key="widthClass=compact">
                                     <mask key="constraints">
                                         <exclude reference="9vA-z4-LPO"/>
                                         <include reference="Xl7-5u-tbS"/>
@@ -2505,9 +2501,9 @@ to our Terms of Service</string>
         <image name="SignUp" width="375" height="667"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Z3P-62-cEw"/>
         <segue reference="Pxn-E2-vdC"/>
-        <segue reference="JsC-D5-XWE"/>
+        <segue reference="jt6-zH-fta"/>
+        <segue reference="Z3P-62-cEw"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.0" green="0.7843137255" blue="0.32156862749999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
 </document>

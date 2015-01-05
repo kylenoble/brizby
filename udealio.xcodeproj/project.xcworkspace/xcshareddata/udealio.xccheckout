@@ -26,7 +26,7 @@
 		<key>C0D653E50EFB2F6A86ECA063ED335405B8A1771D</key>
 		<string>../..</string>
 		<key>C861FC00CEE0F6A6BE81FCFF6785FAA78C58EBB3</key>
-		<string>../../SwiftyJSON/</string>
+		<string>../../SwiftyJSON</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>https://github.com/kylenoble/udealio.git</string>

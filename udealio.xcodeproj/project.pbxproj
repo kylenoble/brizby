@@ -27,6 +27,10 @@
 		F740CE7E1A2E8C4200C8B14D /* FloatLabelTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = F740CE7C1A2E8C4200C8B14D /* FloatLabelTextField.swift */; };
 		F740CE7F1A2E8C4200C8B14D /* FloatLabelTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F740CE7D1A2E8C4200C8B14D /* FloatLabelTextView.swift */; };
 		F754D4BF1A55C67700AA6A1A /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F754D4BE1A55C67700AA6A1A /* Security.framework */; };
+		F7710C4F1A5B2BAE0036795B /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7FA85DE1A5B296500FCF4FF /* SwiftyJSON.framework */; };
+		F7710C501A5B2BAE0036795B /* SwiftyJSON.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F7FA85DE1A5B296500FCF4FF /* SwiftyJSON.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F7710C531A5B2BAE0036795B /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7FA85CA1A5B283C00FCF4FF /* Alamofire.framework */; };
+		F7710C541A5B2BAE0036795B /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F7FA85CA1A5B283C00FCF4FF /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F78C881F1A26BCD900494B67 /* AlegreyaSans-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = F78C881D1A26BCD900494B67 /* AlegreyaSans-Medium.otf */; };
 		F78C88201A26BCD900494B67 /* AlegreyaSans-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = F78C881E1A26BCD900494B67 /* AlegreyaSans-Regular.otf */; };
 		F78C88241A26C17100494B67 /* AlegreyaSansSC-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = F78C88221A26C17100494B67 /* AlegreyaSansSC-Regular.otf */; };
@@ -40,8 +44,6 @@
 		F7EA50C81A5A0AED00351255 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7EA50C71A5A0AED00351255 /* SwiftyJSON.swift */; };
 		F7FA85BE1A5B1DAA00FCF4FF /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7FA85BD1A5B1DAA00FCF4FF /* FeedViewController.swift */; };
 		F7FA85C01A5B1DC200FCF4FF /* s3-2006-03-01.json in Resources */ = {isa = PBXBuildFile; fileRef = F7FA85BF1A5B1DC200FCF4FF /* s3-2006-03-01.json */; };
-		F7FA85CD1A5B284900FCF4FF /* Alamofire.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = F7FA85CA1A5B283C00FCF4FF /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		F7FA85E51A5B296D00FCF4FF /* SwiftyJSON.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = F7FA85DE1A5B296500FCF4FF /* SwiftyJSON.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,20 @@
 			proxyType = 1;
 			remoteGlobalIDString = F7328D531A2571FB002D1A98;
 			remoteInfo = udealio;
+		};
+		F7710C511A5B2BAE0036795B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F7FA85D41A5B296400FCF4FF /* SwiftyJSON.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 2E4FEFDA19575BE100351305;
+			remoteInfo = SwiftyJSON;
+		};
+		F7710C551A5B2BAE0036795B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F7FA85C41A5B283B00FCF4FF /* Alamofire.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = F8111E3219A95C8B0040E7D1;
+			remoteInfo = Alamofire;
 		};
 		F7FA85C91A5B283C00FCF4FF /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -80,33 +96,19 @@
 			remoteGlobalIDString = 2E4FEFE619575BE100351305;
 			remoteInfo = SwiftyJSONTests;
 		};
-		F7FA85E11A5B296500FCF4FF /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = F7FA85D41A5B296400FCF4FF /* SwiftyJSON.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 4EC1C1C91A0C1A2D0026ED0B;
-			remoteInfo = SwiftyJSONOSX;
-		};
-		F7FA85E31A5B296500FCF4FF /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = F7FA85D41A5B296400FCF4FF /* SwiftyJSON.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 4EC1C1D31A0C1A2D0026ED0B;
-			remoteInfo = SwiftyJSONOSXTests;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		F71688AA1A58908800F82EF2 /* Copy Frameworks */ = {
+		F7710C571A5B2BAF0036795B /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				F7FA85E51A5B296D00FCF4FF /* SwiftyJSON.framework in Copy Frameworks */,
-				F7FA85CD1A5B284900FCF4FF /* Alamofire.framework in Copy Frameworks */,
+				F7710C501A5B2BAE0036795B /* SwiftyJSON.framework in Embed Frameworks */,
+				F7710C541A5B2BAE0036795B /* Alamofire.framework in Embed Frameworks */,
 			);
-			name = "Copy Frameworks";
+			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
@@ -161,8 +163,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F7710C4F1A5B2BAE0036795B /* SwiftyJSON.framework in Frameworks */,
 				F754D4BF1A55C67700AA6A1A /* Security.framework in Frameworks */,
 				F71688D11A5891F100F82EF2 /* AWSRuntime.framework in Frameworks */,
+				F7710C531A5B2BAE0036795B /* Alamofire.framework in Frameworks */,
 				F71688D21A5891F100F82EF2 /* AWSS3.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -351,8 +355,6 @@
 			children = (
 				F7FA85DE1A5B296500FCF4FF /* SwiftyJSON.framework */,
 				F7FA85E01A5B296500FCF4FF /* SwiftyJSONTests.xctest */,
-				F7FA85E21A5B296500FCF4FF /* SwiftyJSON.framework */,
-				F7FA85E41A5B296500FCF4FF /* SwiftyJSONOSXTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -367,11 +369,13 @@
 				F7328D501A2571FB002D1A98 /* Sources */,
 				F7328D511A2571FB002D1A98 /* Frameworks */,
 				F7328D521A2571FB002D1A98 /* Resources */,
-				F71688AA1A58908800F82EF2 /* Copy Frameworks */,
+				F7710C571A5B2BAF0036795B /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				F7710C521A5B2BAE0036795B /* PBXTargetDependency */,
+				F7710C561A5B2BAE0036795B /* PBXTargetDependency */,
 			);
 			name = udealio;
 			productName = udealio;
@@ -473,20 +477,6 @@
 			remoteRef = F7FA85DF1A5B296500FCF4FF /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		F7FA85E21A5B296500FCF4FF /* SwiftyJSON.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = SwiftyJSON.framework;
-			remoteRef = F7FA85E11A5B296500FCF4FF /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		F7FA85E41A5B296500FCF4FF /* SwiftyJSONOSXTests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = SwiftyJSONOSXTests.xctest;
-			remoteRef = F7FA85E31A5B296500FCF4FF /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
 /* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
@@ -558,6 +548,16 @@
 			isa = PBXTargetDependency;
 			target = F7328D531A2571FB002D1A98 /* udealio */;
 			targetProxy = F7328D6A1A2571FB002D1A98 /* PBXContainerItemProxy */;
+		};
+		F7710C521A5B2BAE0036795B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SwiftyJSON;
+			targetProxy = F7710C511A5B2BAE0036795B /* PBXContainerItemProxy */;
+		};
+		F7710C561A5B2BAE0036795B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Alamofire;
+			targetProxy = F7710C551A5B2BAE0036795B /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -656,6 +656,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"/Users/kylenoble/Downloads/aws-ios-sdk-2.0.13/frameworks",
@@ -702,6 +703,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"/Users/kylenoble/Downloads/aws-ios-sdk-2.0.13/frameworks",
