@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		F712D6171A5B0D8300083727 /* Alamofire.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = F712D6141A5B0D6900083727 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F71688D11A5891F100F82EF2 /* AWSRuntime.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F71688B11A5891F100F82EF2 /* AWSRuntime.framework */; };
 		F71688D21A5891F100F82EF2 /* AWSS3.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F71688B21A5891F100F82EF2 /* AWSS3.framework */; };
 		F71688D31A5891F100F82EF2 /* BucketInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = F71688B31A5891F100F82EF2 /* BucketInfo.swift */; };
@@ -22,14 +21,12 @@
 		F7328D5F1A2571FB002D1A98 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F7328D5D1A2571FB002D1A98 /* Main.storyboard */; };
 		F7328D611A2571FB002D1A98 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F7328D601A2571FB002D1A98 /* Images.xcassets */; };
 		F7328D701A2571FB002D1A98 /* udealioTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7328D6F1A2571FB002D1A98 /* udealioTests.swift */; };
-		F7328D801A25A870002D1A98 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7328D7F1A25A870002D1A98 /* FeedViewController.swift */; };
 		F7328D821A25A9D0002D1A98 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7328D811A25A9D0002D1A98 /* ProfileViewController.swift */; };
 		F7328D841A25A9F6002D1A98 /* DealsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7328D831A25A9F6002D1A98 /* DealsViewController.swift */; };
 		F7328D881A25B34B002D1A98 /* TabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7328D871A25B34B002D1A98 /* TabViewController.swift */; };
 		F740CE7E1A2E8C4200C8B14D /* FloatLabelTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = F740CE7C1A2E8C4200C8B14D /* FloatLabelTextField.swift */; };
 		F740CE7F1A2E8C4200C8B14D /* FloatLabelTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F740CE7D1A2E8C4200C8B14D /* FloatLabelTextView.swift */; };
 		F754D4BF1A55C67700AA6A1A /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F754D4BE1A55C67700AA6A1A /* Security.framework */; };
-		F754D4D31A55CB0000AA6A1A /* s3-2006-03-01.json in Resources */ = {isa = PBXBuildFile; fileRef = F754D4D21A55CB0000AA6A1A /* s3-2006-03-01.json */; };
 		F78C881F1A26BCD900494B67 /* AlegreyaSans-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = F78C881D1A26BCD900494B67 /* AlegreyaSans-Medium.otf */; };
 		F78C88201A26BCD900494B67 /* AlegreyaSans-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = F78C881E1A26BCD900494B67 /* AlegreyaSans-Regular.otf */; };
 		F78C88241A26C17100494B67 /* AlegreyaSansSC-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = F78C88221A26C17100494B67 /* AlegreyaSansSC-Regular.otf */; };
@@ -41,29 +38,32 @@
 		F7E4F6511A49115E00C3A2D2 /* BusinessLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7E4F6501A49115E00C3A2D2 /* BusinessLoginViewController.swift */; };
 		F7E4F6571A49147400C3A2D2 /* Business.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7E4F6561A49147400C3A2D2 /* Business.swift */; };
 		F7EA50C81A5A0AED00351255 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7EA50C71A5A0AED00351255 /* SwiftyJSON.swift */; };
+		F7FA85BC1A5B1D7700FCF4FF /* Alamofire.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = F7FA85B91A5B1D6A00FCF4FF /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F7FA85BE1A5B1DAA00FCF4FF /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7FA85BD1A5B1DAA00FCF4FF /* FeedViewController.swift */; };
+		F7FA85C01A5B1DC200FCF4FF /* s3-2006-03-01.json in Resources */ = {isa = PBXBuildFile; fileRef = F7FA85BF1A5B1DC200FCF4FF /* s3-2006-03-01.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		F712D6131A5B0D6900083727 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = F712D60E1A5B0D6900083727 /* Alamofire.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = F8111E3319A95C8B0040E7D1;
-			remoteInfo = Alamofire;
-		};
-		F712D6151A5B0D6900083727 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = F712D60E1A5B0D6900083727 /* Alamofire.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = F8111E3E19A95C8B0040E7D1;
-			remoteInfo = AlamofireTests;
-		};
 		F7328D6A1A2571FB002D1A98 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = F7328D4C1A2571FB002D1A98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = F7328D531A2571FB002D1A98;
 			remoteInfo = udealio;
+		};
+		F7FA85B81A5B1D6A00FCF4FF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F7FA85B31A5B1D6A00FCF4FF /* Alamofire.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F8111E3319A95C8B0040E7D1;
+			remoteInfo = Alamofire;
+		};
+		F7FA85BA1A5B1D6A00FCF4FF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F7FA85B31A5B1D6A00FCF4FF /* Alamofire.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F8111E3E19A95C8B0040E7D1;
+			remoteInfo = AlamofireTests;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -74,7 +74,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				F712D6171A5B0D8300083727 /* Alamofire.framework in Copy Frameworks */,
+				F7FA85BC1A5B1D7700FCF4FF /* Alamofire.framework in Copy Frameworks */,
 			);
 			name = "Copy Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -82,7 +82,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		F712D60E1A5B0D6900083727 /* Alamofire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Alamofire.xcodeproj; path = Alamofire/Alamofire.xcodeproj; sourceTree = "<group>"; };
 		F71688B11A5891F100F82EF2 /* AWSRuntime.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AWSRuntime.framework; sourceTree = "<group>"; };
 		F71688B21A5891F100F82EF2 /* AWSS3.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AWSS3.framework; sourceTree = "<group>"; };
 		F71688B31A5891F100F82EF2 /* BucketInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BucketInfo.swift; sourceTree = "<group>"; };
@@ -104,14 +103,12 @@
 		F7328D691A2571FB002D1A98 /* udealioTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = udealioTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7328D6E1A2571FB002D1A98 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F7328D6F1A2571FB002D1A98 /* udealioTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = udealioTests.swift; sourceTree = "<group>"; };
-		F7328D7F1A25A870002D1A98 /* FeedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FeedViewController.swift; path = ../FeedViewController.swift; sourceTree = "<group>"; };
 		F7328D811A25A9D0002D1A98 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		F7328D831A25A9F6002D1A98 /* DealsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DealsViewController.swift; sourceTree = "<group>"; };
 		F7328D871A25B34B002D1A98 /* TabViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabViewController.swift; sourceTree = "<group>"; };
 		F740CE7C1A2E8C4200C8B14D /* FloatLabelTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FloatLabelTextField.swift; sourceTree = "<group>"; };
 		F740CE7D1A2E8C4200C8B14D /* FloatLabelTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FloatLabelTextView.swift; sourceTree = "<group>"; };
 		F754D4BE1A55C67700AA6A1A /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
-		F754D4D21A55CB0000AA6A1A /* s3-2006-03-01.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = "s3-2006-03-01.json"; path = "../s3-2006-03-01.json"; sourceTree = "<group>"; };
 		F78C881D1A26BCD900494B67 /* AlegreyaSans-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AlegreyaSans-Medium.otf"; sourceTree = "<group>"; };
 		F78C881E1A26BCD900494B67 /* AlegreyaSans-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AlegreyaSans-Regular.otf"; sourceTree = "<group>"; };
 		F78C88221A26C17100494B67 /* AlegreyaSansSC-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AlegreyaSansSC-Regular.otf"; sourceTree = "<group>"; };
@@ -123,6 +120,9 @@
 		F7E4F6501A49115E00C3A2D2 /* BusinessLoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BusinessLoginViewController.swift; sourceTree = "<group>"; };
 		F7E4F6561A49147400C3A2D2 /* Business.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Business.swift; sourceTree = "<group>"; };
 		F7EA50C71A5A0AED00351255 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
+		F7FA85B31A5B1D6A00FCF4FF /* Alamofire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Alamofire.xcodeproj; path = udealio/Alamofire/Alamofire.xcodeproj; sourceTree = "<group>"; };
+		F7FA85BD1A5B1DAA00FCF4FF /* FeedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
+		F7FA85BF1A5B1DC200FCF4FF /* s3-2006-03-01.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "s3-2006-03-01.json"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,15 +153,6 @@
 			name = "Business Main View";
 			sourceTree = "<group>";
 		};
-		F712D60F1A5B0D6900083727 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				F712D6141A5B0D6900083727 /* Alamofire.framework */,
-				F712D6161A5B0D6900083727 /* AlamofireTests.xctest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		F71688B01A5891F100F82EF2 /* S3Kit */ = {
 			isa = PBXGroup;
 			children = (
@@ -190,8 +181,8 @@
 		F72DBB0C1A284108007441C6 /* User Main Views */ = {
 			isa = PBXGroup;
 			children = (
+				F7FA85BD1A5B1DAA00FCF4FF /* FeedViewController.swift */,
 				F7328D811A25A9D0002D1A98 /* ProfileViewController.swift */,
-				F7328D7F1A25A870002D1A98 /* FeedViewController.swift */,
 				F7328D871A25B34B002D1A98 /* TabViewController.swift */,
 				F7328D831A25A9F6002D1A98 /* DealsViewController.swift */,
 			);
@@ -214,7 +205,7 @@
 		F7328D4B1A2571FB002D1A98 = {
 			isa = PBXGroup;
 			children = (
-				F712D60E1A5B0D6900083727 /* Alamofire.xcodeproj */,
+				F7FA85B31A5B1D6A00FCF4FF /* Alamofire.xcodeproj */,
 				F754D4BE1A55C67700AA6A1A /* Security.framework */,
 				F7328D561A2571FB002D1A98 /* udealio */,
 				F7328D6C1A2571FB002D1A98 /* udealioTests */,
@@ -248,8 +239,8 @@
 		F7328D571A2571FB002D1A98 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				F7FA85BF1A5B1DC200FCF4FF /* s3-2006-03-01.json */,
 				F7D2DF521A587C7400532271 /* KeyChainAccess.swift */,
-				F754D4D21A55CB0000AA6A1A /* s3-2006-03-01.json */,
 				F7EA50C71A5A0AED00351255 /* SwiftyJSON.swift */,
 				F7328D581A2571FB002D1A98 /* Info.plist */,
 			);
@@ -312,6 +303,15 @@
 				F7E4F6561A49147400C3A2D2 /* Business.swift */,
 			);
 			name = Models;
+			sourceTree = "<group>";
+		};
+		F7FA85B41A5B1D6A00FCF4FF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F7FA85B91A5B1D6A00FCF4FF /* Alamofire.framework */,
+				F7FA85BB1A5B1D6A00FCF4FF /* AlamofireTests.xctest */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -385,8 +385,8 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = F712D60F1A5B0D6900083727 /* Products */;
-					ProjectRef = F712D60E1A5B0D6900083727 /* Alamofire.xcodeproj */;
+					ProductGroup = F7FA85B41A5B1D6A00FCF4FF /* Products */;
+					ProjectRef = F7FA85B31A5B1D6A00FCF4FF /* Alamofire.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -398,18 +398,18 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		F712D6141A5B0D6900083727 /* Alamofire.framework */ = {
+		F7FA85B91A5B1D6A00FCF4FF /* Alamofire.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
 			path = Alamofire.framework;
-			remoteRef = F712D6131A5B0D6900083727 /* PBXContainerItemProxy */;
+			remoteRef = F7FA85B81A5B1D6A00FCF4FF /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		F712D6161A5B0D6900083727 /* AlamofireTests.xctest */ = {
+		F7FA85BB1A5B1D6A00FCF4FF /* AlamofireTests.xctest */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
 			path = AlamofireTests.xctest;
-			remoteRef = F712D6151A5B0D6900083727 /* PBXContainerItemProxy */;
+			remoteRef = F7FA85BA1A5B1D6A00FCF4FF /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -423,9 +423,9 @@
 				F78C88261A26C18A00494B67 /* AlegreyaSansSC-Medium.otf in Resources */,
 				F71688D41A5891F100F82EF2 /* Info.plist in Resources */,
 				F78C88201A26BCD900494B67 /* AlegreyaSans-Regular.otf in Resources */,
-				F754D4D31A55CB0000AA6A1A /* s3-2006-03-01.json in Resources */,
 				F7328D611A2571FB002D1A98 /* Images.xcassets in Resources */,
 				F78C881F1A26BCD900494B67 /* AlegreyaSans-Medium.otf in Resources */,
+				F7FA85C01A5B1DC200FCF4FF /* s3-2006-03-01.json in Resources */,
 				F78C88241A26C17100494B67 /* AlegreyaSansSC-Regular.otf in Resources */,
 				F72DBB061A282F01007441C6 /* Launch Screen.storyboard in Resources */,
 			);
@@ -447,6 +447,7 @@
 			files = (
 				F7D9905D1A368E7300368A0B /* OnboardingViewController.swift in Sources */,
 				F72DBB111A2848BF007441C6 /* TransitionManager.swift in Sources */,
+				F7FA85BE1A5B1DAA00FCF4FF /* FeedViewController.swift in Sources */,
 				F72DBB0F1A284194007441C6 /* LoginViewController.swift in Sources */,
 				F7EA50C81A5A0AED00351255 /* SwiftyJSON.swift in Sources */,
 				F7E4F6571A49147400C3A2D2 /* Business.swift in Sources */,
@@ -454,7 +455,6 @@
 				F71688D51A5891F100F82EF2 /* S3Image.swift in Sources */,
 				F740CE7E1A2E8C4200C8B14D /* FloatLabelTextField.swift in Sources */,
 				F7328D821A25A9D0002D1A98 /* ProfileViewController.swift in Sources */,
-				F7328D801A25A870002D1A98 /* FeedViewController.swift in Sources */,
 				F71688D61A5891F100F82EF2 /* S3Wrapper.m in Sources */,
 				F7328D881A25B34B002D1A98 /* TabViewController.swift in Sources */,
 				F7DDE19F1A2D19310051E0E0 /* SignUpViewController.swift in Sources */,
