@@ -13,10 +13,6 @@ import SwiftyJSON
 
 class HTTPClient {
 
-    private var _myJSON: SwiftyJSON.JSON?
-    private var _errorText:SwiftyJSON.JSON?
-    private var _authRequired: Bool?
-
     init() {
 
     }
@@ -36,14 +32,16 @@ class HTTPClient {
         let encoding = Alamofire.ParameterEncoding.JSON
         let httpRequest = encoding.encode(URLRequest, parameters: parameters).0
 
-        if (self._authRequired != nil) {
+        if (authRequired != false) {
             var email_token: NSDictionary?
             var auth_token: NSDictionary?
             var email_error: NSError?
             var auth_error: NSError?
 
+            var credential: NSURLCredential
+
             let defaults = NSUserDefaults.standardUserDefaults()
-            if defaults.objectForKey("userLoggedIn") != nil {
+            if defaults.objectForKey("userLoggedIn") as Bool != false {
                 (email_token, email_error) = Locksmith.loadDataForUserAccount("Email_Token", inService: "KeyChainService")
                 (auth_token, auth_error) = Locksmith.loadDataForUserAccount("Auth_Token", inService: "KeyChainService")
             } else {
@@ -51,7 +49,13 @@ class HTTPClient {
                 auth_token = ["key": "value"]
             }
 
-            let credential = NSURLCredential(user: email_token?["email"] as String, password: auth_token?["auth_token"] as String, persistence: .ForSession)
+            if email_error == nil && auth_error == nil {
+                credential = NSURLCredential(user: email_token!["email"] as String, password: auth_token!["auth_token"] as String, persistence: .ForSession)
+            } else {
+                println(email_error?)
+                println(auth_error?)
+                credential = NSURLCredential(user: "", password: "", persistence: .ForSession)
+            }
 
             Alamofire.request(httpRequest)
                 .authenticate(usingCredential: credential)

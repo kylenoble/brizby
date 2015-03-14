@@ -427,10 +427,15 @@ class SignUpViewController: UIViewController, UITextFieldDelegate, UIImagePicker
 
         if let code = myJSON?["state"]["code"] {
           if code == 0 {
-            //                    NSUserDefaults.standardUserDefaults().setObject(myJSON!["state"], forKey: kEmailKey)
-            //                    NSUserDefaults.standardUserDefaults().setObject(myJSON!, forKey: kAuthTokenKey)
+            NSUserDefaults.standardUserDefaults().setObject(true, forKey: "userLoggedIn")
             NSUserDefaults.standardUserDefaults().synchronize()
-            
+
+            let token = myJSON?["auth_token"].string
+            let email = myJSON?["email"].string
+
+            Locksmith.saveData(["email": "\(email)"], forUserAccount: "Email_Token", inService: "KeyChainService")
+            Locksmith.saveData(["auth_token": "\(token)"], forUserAccount: "Auth_Token", inService: "KeyChainService")
+
             self.performSegueWithIdentifier("signupToOnboardingView", sender: nil)
           }
           else {
@@ -438,7 +443,6 @@ class SignUpViewController: UIViewController, UITextFieldDelegate, UIImagePicker
             alert.title = "Error"
             alert.message = myJSON!["error"].string
             alert.show()
-            
           }
         }
         else {
