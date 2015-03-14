@@ -226,7 +226,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
 
         var alert = UIAlertView(title: "Success!", message: msg, delegate: nil, cancelButtonTitle: "Okay.")
 
-        APIManager.sharedInstance.userSignIn(usernameTextInputField.text, password: passwordTextInputField.text) { myJSON, error in
+        APIManager.sharedInstance.signIn(usernameTextInputField.text, password: passwordTextInputField.text, type: "user") { myJSON, error in
 
             if let message = myJSON?["message"] {
                 if message == "Logged in" {

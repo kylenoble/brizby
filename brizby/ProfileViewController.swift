@@ -70,17 +70,10 @@ class ProfileViewController: UITableViewController {
         var alert = UIAlertView(title: "Success!", message: msg, delegate: nil, cancelButtonTitle: "Okay.")
         
         var myJSON: SwiftyJSON.JSON?
-        Alamofire.request(User.Router.SignOut()).responseJSON {
-            (_, _, object, _) in
-            
-            myJSON = SwiftyJSON.JSON(object!)
-            println(myJSON?)
-            
-            
+        APIManager.sharedInstance.signOut("user") { myJSON, error in
+
             if let message = myJSON?["message"] {
                 if message == "Logged out successfully." {
-                    
-                    println("segue")
                     self.performSegueWithIdentifier("logoutToLoginScreen", sender: nil)
                 }
                 else {

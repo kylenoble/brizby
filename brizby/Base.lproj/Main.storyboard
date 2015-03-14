@@ -458,7 +458,7 @@
                             <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SMn-zd-HeO">
                                 <rect key="frame" x="-4" y="256" width="408" height="125"/>
                                 <subviews>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" ambiguous="YES" misplaced="YES" selected="YES" contentHorizontalAlignment="left" contentVerticalAlignment="bottom" placeholder="Username" clearsOnBeginEditing="YES" minimumFontSize="13" translatesAutoresizingMaskIntoConstraints="NO" id="PSV-uM-361" customClass="FloatLabelTextField" customModule="brizby" customModuleProvider="target">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" ambiguous="YES" misplaced="YES" selected="YES" contentHorizontalAlignment="left" contentVerticalAlignment="bottom" placeholder="Email" clearsOnBeginEditing="YES" minimumFontSize="13" translatesAutoresizingMaskIntoConstraints="NO" id="PSV-uM-361" customClass="FloatLabelTextField" customModule="brizby" customModuleProvider="target">
                                         <rect key="frame" x="20" y="20" width="368" height="30"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
@@ -1047,7 +1047,7 @@ to our Terms of Service</string>
                             <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Cos-ZB-A0y">
                                 <rect key="frame" x="-4" y="75" width="399" height="299"/>
                                 <subviews>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="bottom" placeholder="Username" clearsOnBeginEditing="YES" minimumFontSize="13" translatesAutoresizingMaskIntoConstraints="NO" id="M9u-X4-NIQ" customClass="FloatLabelTextField" customModule="brizby" customModuleProvider="target">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="bottom" placeholder="Email" clearsOnBeginEditing="YES" minimumFontSize="13" translatesAutoresizingMaskIntoConstraints="NO" id="M9u-X4-NIQ" customClass="FloatLabelTextField" customModule="brizby" customModuleProvider="target">
                                         <rect key="frame" x="20" y="49" width="223" height="30"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
@@ -2501,9 +2501,9 @@ to our Terms of Service</string>
         <image name="SignUp" width="375" height="667"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Pxn-E2-vdC"/>
-        <segue reference="jt6-zH-fta"/>
         <segue reference="Z3P-62-cEw"/>
+        <segue reference="Pxn-E2-vdC"/>
+        <segue reference="JsC-D5-XWE"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.0" green="0.7843137255" blue="0.32156862749999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
 </document>

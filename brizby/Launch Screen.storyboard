@@ -1,184 +1,71 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="FsU-En-dbT">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14D72i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="zXn-sD-Lje">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
     </dependencies>
     <scenes>
-        <!--Tab View Controller-->
-        <scene sceneID="S3f-QZ-Dqr">
-            <objects>
-                <tabBarController id="FsU-En-dbT" customClass="TabViewController" customModule="udealio" customModuleProvider="target" sceneMemberID="viewController">
-                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
-                    <nil key="simulatedBottomBarMetrics"/>
-                    <tabBar key="tabBar" contentMode="scaleToFill" translucent="NO" id="jky-1j-R8K">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <color key="barTintColor" red="0.0" green="0.7843137255" blue="0.32156862749999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    </tabBar>
-                    <connections>
-                        <segue destination="1iN-Rn-Inf" kind="relationship" relationship="viewControllers" id="JZ6-yN-lZZ"/>
-                        <segue destination="ol2-4X-VSJ" kind="relationship" relationship="viewControllers" id="tXf-Py-ciF"/>
-                        <segue destination="Va6-bg-Tmx" kind="relationship" relationship="viewControllers" id="KB6-kD-eo0"/>
-                        <segue destination="oQs-IR-ZXc" kind="relationship" relationship="viewControllers" id="FNQ-ca-esL"/>
-                    </connections>
-                </tabBarController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="wLD-h7-Vdi" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-3253" y="1871"/>
-        </scene>
-        <!--Feed View Controller-->
-        <scene sceneID="ln5-DL-EoO">
-            <objects>
-                <tableViewController clearsSelectionOnViewWillAppear="NO" id="RGR-O9-vht" customClass="FeedViewController" customModule="udealio" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="zFe-zH-atD">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="487"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <view key="tableFooterView" contentMode="scaleToFill" id="CFs-fe-8Vw">
-                            <rect key="frame" x="0.0" y="0.0" width="600" height="568"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        </view>
-                        <connections>
-                            <outlet property="dataSource" destination="RGR-O9-vht" id="otp-HL-msh"/>
-                            <outlet property="delegate" destination="RGR-O9-vht" id="g1J-z5-N1v"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" id="cQo-NW-Vnq"/>
-                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="1Jh-T3-VSn" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-1603.5" y="700.5"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="NfK-p7-pEs">
-            <objects>
-                <navigationController id="1iN-Rn-Inf" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" image="Home" id="bw0-oZ-Ryn">
-                        <inset key="imageInsets" minX="0.0" minY="5" maxX="0.0" maxY="-5"/>
-                    </tabBarItem>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="bMd-xt-tPO">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <color key="barTintColor" red="0.0" green="0.7843137255" blue="0.32156862749999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="RGR-O9-vht" kind="relationship" relationship="rootViewController" id="xKf-rp-ngT"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="eYO-io-97f" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-2577" y="823"/>
-        </scene>
-        <!--Profile View Controller-->
-        <scene sceneID="zZR-xD-T7J">
-            <objects>
-                <tableViewController id="Mfb-tv-MOn" customClass="ProfileViewController" customModule="udealio" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="5FD-y9-uif">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="487"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <connections>
-                            <outlet property="dataSource" destination="Mfb-tv-MOn" id="lZt-9A-9aG"/>
-                            <outlet property="delegate" destination="Mfb-tv-MOn" id="JEp-SU-I00"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" id="ZJH-22-F3o"/>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="wFY-JG-Dfk" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-1337" y="1627"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="2xz-hh-Kb5">
-            <objects>
-                <navigationController id="ol2-4X-VSJ" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" image="Profile" selectedImage="PFill.png" id="0dr-2U-dUK">
-                        <inset key="imageInsets" minX="0.0" minY="5" maxX="0.0" maxY="-5"/>
-                    </tabBarItem>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="g66-rx-mwu">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <color key="barTintColor" red="0.0" green="0.7843137255" blue="0.32156862749999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="Mfb-tv-MOn" kind="relationship" relationship="rootViewController" id="TU6-AI-dsm"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="09c-0w-xkU" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-2333" y="1650"/>
-        </scene>
-        <!--Deals View Controller-->
-        <scene sceneID="Cn6-6I-Usz">
-            <objects>
-                <tableViewController id="yZg-yC-hJo" customClass="DealsViewController" customModule="udealio" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="mX5-2f-8dS">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="487"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <connections>
-                            <outlet property="dataSource" destination="yZg-yC-hJo" id="rHW-mo-aL6"/>
-                            <outlet property="delegate" destination="yZg-yC-hJo" id="Pdf-UD-7Yr"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" id="91P-oL-GGo"/>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="sTj-6y-I1r" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-1265" y="2479"/>
-        </scene>
         <!--View Controller-->
-        <scene sceneID="lJq-Ks-PY8">
+        <scene sceneID="s4c-3x-xDn">
             <objects>
-                <viewController id="oQs-IR-ZXc" sceneMemberID="viewController">
+                <viewController id="VmZ-HA-yCO" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="2xS-Ev-Ikn"/>
-                        <viewControllerLayoutGuide type="bottom" id="iZP-3g-oBd"/>
+                        <viewControllerLayoutGuide type="top" id="7fz-ab-STl"/>
+                        <viewControllerLayoutGuide type="bottom" id="ylR-AA-j4V"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="CpG-oZ-Wre">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
+                    <view key="view" contentMode="scaleToFill" id="K5V-Cq-hsi">
+                        <rect key="frame" x="0.0" y="64" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" image="Map" selectedImage="MapFill" id="TAj-7H-bD3">
-                        <inset key="imageInsets" minX="0.0" minY="5" maxX="0.0" maxY="-5"/>
-                    </tabBarItem>
-                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
+                    <navigationItem key="navigationItem" id="ZRn-GI-bG7"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="NHH-xK-lxv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Zsr-RF-vHa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3111" y="2867"/>
+            <point key="canvasLocation" x="-1611" y="2062"/>
         </scene>
         <!--Navigation Controller-->
-        <scene sceneID="Olt-HO-UBF">
+        <scene sceneID="7nI-nU-tQo">
             <objects>
-                <navigationController id="Va6-bg-Tmx" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" image="Deals" id="aVn-Ds-jdg">
-                        <inset key="imageInsets" minX="0.0" minY="5" maxX="0.0" maxY="-5"/>
-                    </tabBarItem>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="M4I-NE-Muh">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="XYM-RR-ySn" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="" id="kKH-4X-3tW"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" backIndicatorTransitionMaskImage="udealio" id="s9W-L9-Ht8">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" red="0.0" green="0.7843137255" blue="0.32156862749999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </navigationBar>
+                    <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="yZg-yC-hJo" kind="relationship" relationship="rootViewController" id="WV4-VI-5G0"/>
+                        <segue destination="VmZ-HA-yCO" kind="relationship" relationship="rootViewController" id="YIp-K2-ekm"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="b4g-k3-fHf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Jfd-ds-Yvb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2259" y="2502"/>
+            <point key="canvasLocation" x="-2423" y="2062"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="5d2-Y4-PBh">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="zXn-sD-Lje" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="1k7-v5-GT2">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" red="0.0" green="0.7843137255" blue="0.32156862749999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="barTintColor" red="0.0" green="0.7843137255" blue="0.32156862749999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="selectedImageTintColor" red="0.0" green="0.7843137255" blue="0.32156862749999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="XYM-RR-ySn" kind="relationship" relationship="viewControllers" id="WuU-Pw-XMI"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6zE-ij-plp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-3235" y="2062"/>
         </scene>
     </scenes>
     <resources>
-        <image name="Deals" width="30" height="30"/>
-        <image name="Home" width="30" height="30"/>
-        <image name="Map" width="32" height="28"/>
-        <image name="MapFill" width="32" height="28"/>
-        <image name="PFill.png" width="16" height="16"/>
-        <image name="Profile" width="33" height="27"/>
+        <image name="udealio" width="111" height="27"/>
     </resources>
     <color key="tintColor" red="0.0" green="0.7843137255" blue="0.32156862749999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
 </document>
