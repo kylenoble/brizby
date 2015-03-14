@@ -16,7 +16,7 @@
 #import <Foundation/Foundation.h>
 
 #ifdef AWS_MULTI_FRAMEWORK
-#import <AWSRuntime/AmazonSDKUtil.h>
+#import "../../../S3Kit/AWSRuntime.framework/Headers/AmazonSDKUtil.h"
 #else
 #import "../AmazonSDKUtil.h"
 #endif

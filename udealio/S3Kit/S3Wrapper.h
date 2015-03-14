@@ -28,5 +28,4 @@
 - (NSArray*) listObjects:(NSString*)bucket;
 - (NSData*) getObject:(NSString*)key bucket:(NSString*)bucketName;
 - (NSError*) putJPEG:(NSData*)imageData key:(NSString*)imageName bucket:(NSString*)bucketName;
-
 @end

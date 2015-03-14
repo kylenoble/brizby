@@ -24,8 +24,8 @@
 
 @import MobileCoreServices;
 
-#import <AWSS3/AWSS3.h>
-#import <AWSRuntime/AWSRuntime.h>
+#import "AWSS3.framework/Headers/AWSS3.h"
+#import "../S3Kit/AWSRuntime.framework/Headers/AWSRuntime.h"
 
 
 @interface S3Wrapper ()
@@ -61,6 +61,7 @@
   return response.body;
 }
 
+
 - (NSError*) putJPEG:(NSData*)imageData key:(NSString*)imageName bucket:(NSString*)bucketName
 {
   S3PutObjectRequest *putObjectRequest = [[S3PutObjectRequest alloc] initWithKey:imageName inBucket:bucketName];
@@ -76,8 +77,9 @@
   NSLog(@"url: %@", putObjectRequest.url);
   NSLog(@"endpoint: %@", putObjectRequest.endpoint);
   NSLog(@"auth: %@", putObjectRequest.authorization);
-  NSLog(@"name: %@", putObjectRequest.filename);
+  NSLog(@"expect: %@", putObjectRequest.expect);
   return error;
 }
+
 
 @end

@@ -26,7 +26,7 @@ import UIKit
 
 let ACCESS_KEY_ID = "AKIAIQ223NVRAMUNXQCQ"
 let SECRET_KEY = "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"
-let BUCKET_NAME = "udealio"
+let BUCKET_NAME = "brizby"
 
 public class BucketInfo {
   var files : [S3Image] = []
@@ -58,7 +58,7 @@ public class BucketInfo {
           let url = fileArray[0].URLByAppendingPathComponent(key);
           data.writeToURL(url, atomically: true)
           imWrapper.url = url;
-  
+
           let arr : NSArray = images
           let row = arr.indexOfObject(imWrapper)
           let indexPath =  NSIndexPath(forRow: row, inSection: 0)
@@ -85,12 +85,9 @@ public class BucketInfo {
     var imageObj : S3Image!
     if error == nil {
       imageObj = S3Image()
-  
       let fileManger = NSFileManager.defaultManager()
       let fileArray: NSArray = fileManger.URLsForDirectory(.CachesDirectory, inDomains: .UserDomainMask)
-      let filePath = "/\(path)/\(fileArray.lastObject)/\(name)"
-      println(imageObj.url)
-      println(imageObj.key)
+      let filePath = "/\(fileArray.lastObject)/\(name)"
     }
     completion(imageObj: imageObj, error: error)
   }

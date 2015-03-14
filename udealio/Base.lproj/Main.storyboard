@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="zHs-E9-2ej">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14D72i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="zHs-E9-2ej">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
         <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
@@ -37,7 +37,7 @@
         <!--Entry View Controller-->
         <scene sceneID="eDG-c1-Mae">
             <objects>
-                <viewController id="zHs-E9-2ej" customClass="EntryViewController" customModule="udealio" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="zHs-E9-2ej" customClass="EntryViewController" customModule="brizby" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="JY1-dm-07u"/>
                         <viewControllerLayoutGuide type="bottom" id="jCF-v2-vLv"/>
@@ -355,7 +355,7 @@
         <!--Login View Controller-->
         <scene sceneID="UyP-X9-5kd">
             <objects>
-                <viewController id="iVI-nU-jvg" customClass="LoginViewController" customModule="udealio" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="iVI-nU-jvg" customClass="LoginViewController" customModule="brizby" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="rgn-Fp-I2d"/>
                         <viewControllerLayoutGuide type="bottom" id="HJF-VP-MDl"/>
@@ -458,7 +458,7 @@
                             <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SMn-zd-HeO">
                                 <rect key="frame" x="-4" y="256" width="408" height="125"/>
                                 <subviews>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" ambiguous="YES" misplaced="YES" selected="YES" contentHorizontalAlignment="left" contentVerticalAlignment="bottom" placeholder="Username" clearsOnBeginEditing="YES" minimumFontSize="13" translatesAutoresizingMaskIntoConstraints="NO" id="PSV-uM-361" customClass="FloatLabelTextField" customModule="udealio" customModuleProvider="target">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" ambiguous="YES" misplaced="YES" selected="YES" contentHorizontalAlignment="left" contentVerticalAlignment="bottom" placeholder="Username" clearsOnBeginEditing="YES" minimumFontSize="13" translatesAutoresizingMaskIntoConstraints="NO" id="PSV-uM-361" customClass="FloatLabelTextField" customModule="brizby" customModuleProvider="target">
                                         <rect key="frame" x="20" y="20" width="368" height="30"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
@@ -498,7 +498,7 @@
                                             <action selector="textFieldDidReturn:" destination="iVI-nU-jvg" eventType="editingDidEnd" id="kuM-Pu-vvq"/>
                                         </connections>
                                     </textField>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" selected="YES" contentHorizontalAlignment="left" contentVerticalAlignment="bottom" placeholder="Password" clearsOnBeginEditing="YES" minimumFontSize="13" translatesAutoresizingMaskIntoConstraints="NO" id="3Lh-Pb-4IR" customClass="FloatLabelTextField" customModule="udealio" customModuleProvider="target">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" selected="YES" contentHorizontalAlignment="left" contentVerticalAlignment="bottom" placeholder="Password" clearsOnBeginEditing="YES" minimumFontSize="13" translatesAutoresizingMaskIntoConstraints="NO" id="3Lh-Pb-4IR" customClass="FloatLabelTextField" customModule="brizby" customModuleProvider="target">
                                         <rect key="frame" x="20" y="75" width="368" height="30"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -885,7 +885,7 @@
         <!--Sign Up View Controller-->
         <scene sceneID="RXI-gO-RgL">
             <objects>
-                <viewController id="9wX-gx-C3J" customClass="SignUpViewController" customModule="udealio" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="9wX-gx-C3J" customClass="SignUpViewController" customModule="brizby" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="JEH-3w-nNE"/>
                         <viewControllerLayoutGuide type="bottom" id="OWj-0a-eeZ"/>
@@ -1047,7 +1047,7 @@ to our Terms of Service</string>
                             <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Cos-ZB-A0y">
                                 <rect key="frame" x="-4" y="75" width="399" height="299"/>
                                 <subviews>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="bottom" placeholder="Username" clearsOnBeginEditing="YES" minimumFontSize="13" translatesAutoresizingMaskIntoConstraints="NO" id="M9u-X4-NIQ" customClass="FloatLabelTextField" customModule="udealio" customModuleProvider="target">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="bottom" placeholder="Username" clearsOnBeginEditing="YES" minimumFontSize="13" translatesAutoresizingMaskIntoConstraints="NO" id="M9u-X4-NIQ" customClass="FloatLabelTextField" customModule="brizby" customModuleProvider="target">
                                         <rect key="frame" x="20" y="49" width="223" height="30"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
@@ -1084,7 +1084,7 @@ to our Terms of Service</string>
                                             <action selector="textFieldDidReturn:" destination="9wX-gx-C3J" eventType="editingDidEnd" id="XbO-IZ-Kql"/>
                                         </connections>
                                     </textField>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="bottom" placeholder="Email" clearsOnBeginEditing="YES" minimumFontSize="13" translatesAutoresizingMaskIntoConstraints="NO" id="H1u-7O-O6X" customClass="FloatLabelTextField" customModule="udealio" customModuleProvider="target">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="bottom" placeholder="Email" clearsOnBeginEditing="YES" minimumFontSize="13" translatesAutoresizingMaskIntoConstraints="NO" id="H1u-7O-O6X" customClass="FloatLabelTextField" customModule="brizby" customModuleProvider="target">
                                         <rect key="frame" x="20" y="149" width="359" height="30"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
@@ -1153,7 +1153,7 @@ to our Terms of Service</string>
                                     <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="H8Y-oS-4RD">
                                         <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                     </imageView>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="bottom" placeholder="Password" clearsOnBeginEditing="YES" minimumFontSize="13" translatesAutoresizingMaskIntoConstraints="NO" id="Nsb-NN-urh" customClass="FloatLabelTextField" customModule="udealio" customModuleProvider="target">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="bottom" placeholder="Password" clearsOnBeginEditing="YES" minimumFontSize="13" translatesAutoresizingMaskIntoConstraints="NO" id="Nsb-NN-urh" customClass="FloatLabelTextField" customModule="brizby" customModuleProvider="target">
                                         <rect key="frame" x="20" y="99" width="223" height="30"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
@@ -1465,7 +1465,7 @@ to our Terms of Service</string>
         <!--Onboarding View Controller-->
         <scene sceneID="N5F-mr-TXt">
             <objects>
-                <viewController id="X7g-84-yqc" customClass="OnboardingViewController" customModule="udealio" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="X7g-84-yqc" customClass="OnboardingViewController" customModule="brizby" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="khs-nF-YOU"/>
                         <viewControllerLayoutGuide type="bottom" id="bBg-e3-TVu"/>
@@ -1548,7 +1548,7 @@ to our Terms of Service</string>
         <!--Tab View Controller-->
         <scene sceneID="S3f-QZ-Dqr">
             <objects>
-                <tabBarController id="FsU-En-dbT" customClass="TabViewController" customModule="udealio" customModuleProvider="target" sceneMemberID="viewController">
+                <tabBarController id="FsU-En-dbT" customClass="TabViewController" customModule="brizby" customModuleProvider="target" sceneMemberID="viewController">
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" translucent="NO" id="jky-1j-R8K">
@@ -1570,7 +1570,7 @@ to our Terms of Service</string>
         <!--Feed View Controller-->
         <scene sceneID="ln5-DL-EoO">
             <objects>
-                <tableViewController id="RGR-O9-vht" customClass="FeedViewController" customModule="udealio" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="RGR-O9-vht" customClass="FeedViewController" customModule="brizby" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="zFe-zH-atD">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="487"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1617,7 +1617,7 @@ to our Terms of Service</string>
         <!--Profile View Controller-->
         <scene sceneID="zZR-xD-T7J">
             <objects>
-                <tableViewController id="Mfb-tv-MOn" customClass="ProfileViewController" customModule="udealio" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="Mfb-tv-MOn" customClass="ProfileViewController" customModule="brizby" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="92" sectionHeaderHeight="22" sectionFooterHeight="22" id="5FD-y9-uif">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="487"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1722,7 +1722,7 @@ to our Terms of Service</string>
         <!--Deals View Controller-->
         <scene sceneID="Cn6-6I-Usz">
             <objects>
-                <tableViewController id="yZg-yC-hJo" customClass="DealsViewController" customModule="udealio" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="yZg-yC-hJo" customClass="DealsViewController" customModule="brizby" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="mX5-2f-8dS">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="487"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1793,7 +1793,7 @@ to our Terms of Service</string>
         <!--Business Login View Controller-->
         <scene sceneID="ziR-YB-Sbs">
             <objects>
-                <viewController id="uFj-qs-Esr" customClass="BusinessLoginViewController" customModule="udealio" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="uFj-qs-Esr" customClass="BusinessLoginViewController" customModule="brizby" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="LzD-UN-avn"/>
                         <viewControllerLayoutGuide type="bottom" id="qjI-S2-VkT"/>
@@ -1957,7 +1957,7 @@ to our Terms of Service</string>
                             <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="i7N-XQ-tYA">
                                 <rect key="frame" x="-4" y="256" width="408" height="125"/>
                                 <subviews>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" ambiguous="YES" misplaced="YES" selected="YES" contentHorizontalAlignment="left" contentVerticalAlignment="bottom" placeholder="Email" clearsOnBeginEditing="YES" minimumFontSize="13" translatesAutoresizingMaskIntoConstraints="NO" id="avh-OJ-z4U" customClass="FloatLabelTextField" customModule="udealio" customModuleProvider="target">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" ambiguous="YES" misplaced="YES" selected="YES" contentHorizontalAlignment="left" contentVerticalAlignment="bottom" placeholder="Email" clearsOnBeginEditing="YES" minimumFontSize="13" translatesAutoresizingMaskIntoConstraints="NO" id="avh-OJ-z4U" customClass="FloatLabelTextField" customModule="brizby" customModuleProvider="target">
                                         <rect key="frame" x="20" y="20" width="368" height="30"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
@@ -1997,7 +1997,7 @@ to our Terms of Service</string>
                                             <action selector="textFieldDidReturn:" destination="uFj-qs-Esr" eventType="editingDidEnd" id="4DI-ix-Zem"/>
                                         </connections>
                                     </textField>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" selected="YES" contentHorizontalAlignment="left" contentVerticalAlignment="bottom" placeholder="Password" clearsOnBeginEditing="YES" minimumFontSize="13" translatesAutoresizingMaskIntoConstraints="NO" id="dpK-Av-dZf" customClass="FloatLabelTextField" customModule="udealio" customModuleProvider="target">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" selected="YES" contentHorizontalAlignment="left" contentVerticalAlignment="bottom" placeholder="Password" clearsOnBeginEditing="YES" minimumFontSize="13" translatesAutoresizingMaskIntoConstraints="NO" id="dpK-Av-dZf" customClass="FloatLabelTextField" customModule="brizby" customModuleProvider="target">
                                         <rect key="frame" x="20" y="75" width="368" height="30"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -2272,7 +2272,7 @@ to our Terms of Service</string>
         <!--Tab View Controller-->
         <scene sceneID="S9a-wB-E00">
             <objects>
-                <tabBarController id="EJV-cr-pk0" customClass="TabViewController" customModule="udealio" customModuleProvider="target" sceneMemberID="viewController">
+                <tabBarController id="EJV-cr-pk0" customClass="TabViewController" customModule="brizby" customModuleProvider="target" sceneMemberID="viewController">
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" translucent="NO" id="kgj-Wi-XHo">
@@ -2293,7 +2293,7 @@ to our Terms of Service</string>
         <!--Feed View Controller-->
         <scene sceneID="UkL-dm-zyQ">
             <objects>
-                <tableViewController id="HOU-2Y-cdu" customClass="FeedViewController" customModule="udealio" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="HOU-2Y-cdu" customClass="FeedViewController" customModule="brizby" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="6x6-BW-Vsv">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="487"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -2340,7 +2340,7 @@ to our Terms of Service</string>
         <!--Profile View Controller-->
         <scene sceneID="hNQ-D9-cBH">
             <objects>
-                <tableViewController id="4sV-Uf-pwV" customClass="ProfileViewController" customModule="udealio" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="4sV-Uf-pwV" customClass="ProfileViewController" customModule="brizby" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="92" sectionHeaderHeight="22" sectionFooterHeight="22" id="eVR-lc-vVz">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="487"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -2442,7 +2442,7 @@ to our Terms of Service</string>
         <!--Deals View Controller-->
         <scene sceneID="Upr-3E-lgF">
             <objects>
-                <tableViewController id="xhK-ZJ-JeH" customClass="DealsViewController" customModule="udealio" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="xhK-ZJ-JeH" customClass="DealsViewController" customModule="brizby" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="ZhQ-Jj-0Ec">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="487"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

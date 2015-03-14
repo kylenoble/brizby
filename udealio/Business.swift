@@ -46,10 +46,8 @@ struct Business {
       URLRequest.setValue("application/json", forHTTPHeaderField: "Accept")
       
       if method == "DELETE" {
-        println(authTokenSavedFromNSUserDefaults)
-        println(emailSavedFromNSUserDefaults)
-        URLRequest.setValue(authTokenSavedFromNSUserDefaults, forHTTPHeaderField: "X-User-Token")
-        URLRequest.setValue(emailSavedFromNSUserDefaults, forHTTPHeaderField: "X-User-Email")
+        //URLRequest.setValue(authTokenSavedFromNSUserDefaults, forHTTPHeaderField: "X-User-Token")
+        //URLRequest.setValue(emailSavedFromNSUserDefaults, forHTTPHeaderField: "X-User-Email")
       }
       
       let encoding = Alamofire.ParameterEncoding.JSON

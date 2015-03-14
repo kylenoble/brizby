@@ -403,79 +403,55 @@ class SignUpViewController: UIViewController, UITextFieldDelegate, UIImagePicker
     
     var msg = ""
     var alert = UIAlertView(title: "Success!", message: msg, delegate: nil, cancelButtonTitle: "Okay.")
-    
+
+    var imageUrl: String!
+
     if let selectedImage =  self.profilePicImage {
       let bucketInfo = BucketInfo()
       let path = "api/v1/profile-pics/"
       let name = "\(NSUUID().UUIDString)"
+      imageUrl = "https://udealio.s3-us-west-1.amazonaws.com/\(name)"
       bucketInfo.uploadImage(selectedImage, path: path, name: name) {
         imageObj, error in
+        if error != nil {
+      
+        }
         println("Image done uploading. Error? \(error)")
         println("Image: \(imageObj.url)")
         println("Image: \(imageObj.key)")
-        spinner.stopAnimating()
       }
     }
-    
-    var myJSON: SwiftyJSON.JSON?
-//    Alamofire.request(User.Router.SignUp(emailTextField.text, passwordTextField.text, usernameTextField.text, self.profilePicImage!)).responseJSON {
-//      (_, _, object, _) in
-//      
-//      if object != nil {
-//        myJSON = SwiftyJSON.JSON(object!)
-//        
-//        if let code = myJSON?["state"]["code"] {
-//          if code == 0 {
-//            println("segue")
-//            println(myJSON!)
-//            //                    NSUserDefaults.standardUserDefaults().setObject(myJSON!["state"], forKey: kEmailKey)
-//            //                    NSUserDefaults.standardUserDefaults().setObject(myJSON!, forKey: kAuthTokenKey)
-//            NSUserDefaults.standardUserDefaults().synchronize()
-//            
-//            self.performSegueWithIdentifier("signupToOnboardingView", sender: nil)
-//          }
-//          else {
-//            spinner.stopAnimating()
-//            alert.title = "Error"
-//            alert.message = myJSON!["error"].string
-//            alert.show()
-//            
-//          }
-//        }
-//        else {
-//          spinner.stopAnimating()
-//          alert.title = "Error"
-//          alert.message = myJSON!["error"].string
-//          alert.show()
-//          
-//        }
-//      }
-//      else {
-//        spinner.stopAnimating()
-//        alert.title = "Error"
-//        alert.message = "Unknown Error. Please try again."
-//        alert.show()
-//      }
-//    }
-    
+
+    APIManager.sharedInstance.userSignUp(emailTextField.text, password: passwordTextField.text, profilePicUrl: imageUrl) { myJSON, error in
+      
+
+        if let code = myJSON?["state"]["code"] {
+          if code == 0 {
+            //                    NSUserDefaults.standardUserDefaults().setObject(myJSON!["state"], forKey: kEmailKey)
+            //                    NSUserDefaults.standardUserDefaults().setObject(myJSON!, forKey: kAuthTokenKey)
+            NSUserDefaults.standardUserDefaults().synchronize()
+            
+            self.performSegueWithIdentifier("signupToOnboardingView", sender: nil)
+          }
+          else {
+            spinner.stopAnimating()
+            alert.title = "Error"
+            alert.message = myJSON!["error"].string
+            alert.show()
+            
+          }
+        }
+        else {
+          spinner.stopAnimating()
+          alert.title = "Error"
+          alert.message = myJSON!["error"].string
+          alert.show()
+          
+        }
+      }
+
+    }
+
   }
   
-  func saveApiTokenInKeychain(tokenDict:NSDictionary) {
-    // Store API AuthToken and AuthToken expiry date in KeyChain
-    tokenDict.enumerateKeysAndObjectsUsingBlock({ (dictKey, dictObj, stopBool) -> Void in
-      var myKey = dictKey as NSString
-      var myObj = dictObj as NSString
-      
-      if myKey == "api_authtoken" {
-        KeychainAccess.setPassword(myObj, account: "Auth_Token", service: "KeyChainService")
-      }
-      
-      if myKey == "authtoken_expiry" {
-        KeychainAccess.setPassword(myObj, account: "Auth_Token_Expiry", service: "KeyChainService")
-      }
-    })
-    
-    self.dismissViewControllerAnimated(true, completion: nil)
-  }
-  
-}
+

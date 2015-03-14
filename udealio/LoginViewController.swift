@@ -225,54 +225,43 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     var msg = ""
     
     var alert = UIAlertView(title: "Success!", message: msg, delegate: nil, cancelButtonTitle: "Okay.")
-    
-    var myJSON: SwiftyJSON.JSON?
-    Alamofire.request(User.Router.SignIn(usernameTextInputField.text, passwordTextInputField.text)).responseJSON {
-      (_, _, object, _) in
-      
-      myJSON = SwiftyJSON.JSON(object!)
-      println(myJSON!)
-      
-      
-      if let message = myJSON?["message"] {
-        if message == "Logged in" {
-          
-          let token = myJSON!["auth_token"].string
-          let email = myJSON!["email"].string
-          
-          println(myJSON!["auth_token"])
-          println(email)
-          
-          NSUserDefaults.standardUserDefaults().setObject(token, forKey: kAuthTokenKey)
-          NSUserDefaults.standardUserDefaults().setObject(email, forKey: kEmailKey)
-          NSUserDefaults.standardUserDefaults().synchronize()
-          
-          let emailSavedFromNSUserDefaults = NSUserDefaults.standardUserDefaults().objectForKey(kEmailKey) as? String
-          let authTokenSavedFromNSUserDefaults = NSUserDefaults.standardUserDefaults().objectForKey(kAuthTokenKey) as? String
-          
-          println(authTokenSavedFromNSUserDefaults)
-          println(emailSavedFromNSUserDefaults)
-          
-          println("segue")
-          self.performSegueWithIdentifier("loginToHomeView", sender: nil)
+
+    APIManager.sharedInstance.userSignIn(usernameTextInputField.text, password: passwordTextInputField.text) { myJSON, error in
+
+        if let message = myJSON?["message"] {
+            if message == "Logged in" {
+              
+              let token = myJSON?["auth_token"].string
+              let email = myJSON?["email"].string
+              
+              Locksmith.saveData(["email": "\(email)"], forUserAccount: "Email_Token", inService: "KeyChainService")
+              Locksmith.saveData(["auth_token": "\(token)"], forUserAccount: "Auth_Token", inService: "KeyChainService")
+
+              self.performSegueWithIdentifier("loginToHomeView", sender: nil)
+            }
+            else {
+              spinner.stopAnimating()
+              alert.title = "Error"
+              alert.message = myJSON?["error"].string
+              alert.show()
+            }
+          }
+          else {
+            alert.title = "Error"
+
+            if myJSON?["error"] != nil {
+                alert.message = myJSON?["error"].string
+            } else {
+                alert.message = "Uknown error occured"
+            }
+
+            alert.show()
+            spinner.stopAnimating()
+          }
         }
-        else {
-          spinner.stopAnimating()
-          alert.title = "Error"
-          alert.message = myJSON!["error"].string
-          alert.show()
-        }
-      }
-      else {
-        alert.title = "Error"
-        alert.message = myJSON!["error"].string
-        alert.show()
-        spinner.stopAnimating()
-      }
-    }
-    
   }
-  
+
+
   @IBAction func signUpButtonPressed(sender: UIButton) {
     self.performSegueWithIdentifier("loginToSignUp", sender: nil)
   }

@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		F71688D11A5891F100F82EF2 /* AWSRuntime.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F71688B11A5891F100F82EF2 /* AWSRuntime.framework */; };
+		F70F99ED1AA9651100C254CE /* Locksmith.swift in Sources */ = {isa = PBXBuildFile; fileRef = F70F99EB1AA9651100C254CE /* Locksmith.swift */; };
+		F70F99EE1AA9651100C254CE /* LocksmithRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F70F99EC1AA9651100C254CE /* LocksmithRequest.swift */; };
 		F71688D21A5891F100F82EF2 /* AWSS3.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F71688B21A5891F100F82EF2 /* AWSS3.framework */; };
 		F71688D31A5891F100F82EF2 /* BucketInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = F71688B31A5891F100F82EF2 /* BucketInfo.swift */; };
 		F71688D41A5891F100F82EF2 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F71688B41A5891F100F82EF2 /* Info.plist */; };
@@ -20,23 +21,25 @@
 		F7328D5A1A2571FB002D1A98 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7328D591A2571FB002D1A98 /* AppDelegate.swift */; };
 		F7328D5F1A2571FB002D1A98 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F7328D5D1A2571FB002D1A98 /* Main.storyboard */; };
 		F7328D611A2571FB002D1A98 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F7328D601A2571FB002D1A98 /* Images.xcassets */; };
-		F7328D701A2571FB002D1A98 /* udealioTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7328D6F1A2571FB002D1A98 /* udealioTests.swift */; };
+		F7328D701A2571FB002D1A98 /* brizbyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7328D6F1A2571FB002D1A98 /* brizbyTests.swift */; };
 		F7328D821A25A9D0002D1A98 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7328D811A25A9D0002D1A98 /* ProfileViewController.swift */; };
 		F7328D841A25A9F6002D1A98 /* DealsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7328D831A25A9F6002D1A98 /* DealsViewController.swift */; };
 		F7328D881A25B34B002D1A98 /* TabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7328D871A25B34B002D1A98 /* TabViewController.swift */; };
 		F740CE7E1A2E8C4200C8B14D /* FloatLabelTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = F740CE7C1A2E8C4200C8B14D /* FloatLabelTextField.swift */; };
 		F740CE7F1A2E8C4200C8B14D /* FloatLabelTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F740CE7D1A2E8C4200C8B14D /* FloatLabelTextView.swift */; };
+		F7482D921AAE930B006C3C20 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7482D911AAE930B006C3C20 /* APIManager.swift */; };
+		F7482D961AAE9CCA006C3C20 /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7482D951AAE9CCA006C3C20 /* HTTPClient.swift */; };
 		F754D4BF1A55C67700AA6A1A /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F754D4BE1A55C67700AA6A1A /* Security.framework */; };
 		F7710C4F1A5B2BAE0036795B /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7FA85DE1A5B296500FCF4FF /* SwiftyJSON.framework */; };
 		F7710C501A5B2BAE0036795B /* SwiftyJSON.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F7FA85DE1A5B296500FCF4FF /* SwiftyJSON.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		F7710C531A5B2BAE0036795B /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7FA85CA1A5B283C00FCF4FF /* Alamofire.framework */; };
-		F7710C541A5B2BAE0036795B /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F7FA85CA1A5B283C00FCF4FF /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F7737BA41AB29D0300C9A974 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7737B9D1AB29CF400C9A974 /* Alamofire.framework */; };
+		F7737BA51AB29D0300C9A974 /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F7737B9D1AB29CF400C9A974 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F7857BD01A89731800919E79 /* AWSRuntime.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F71688B11A5891F100F82EF2 /* AWSRuntime.framework */; };
 		F78C881F1A26BCD900494B67 /* AlegreyaSans-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = F78C881D1A26BCD900494B67 /* AlegreyaSans-Medium.otf */; };
 		F78C88201A26BCD900494B67 /* AlegreyaSans-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = F78C881E1A26BCD900494B67 /* AlegreyaSans-Regular.otf */; };
 		F78C88241A26C17100494B67 /* AlegreyaSansSC-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = F78C88221A26C17100494B67 /* AlegreyaSansSC-Regular.otf */; };
 		F78C88261A26C18A00494B67 /* AlegreyaSansSC-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = F78C88251A26C18A00494B67 /* AlegreyaSansSC-Medium.otf */; };
 		F79B75201A34DF6700DAEE4C /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = F79B751F1A34DF6700DAEE4C /* User.swift */; };
-		F7D2DF531A587C7400532271 /* KeyChainAccess.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7D2DF521A587C7400532271 /* KeyChainAccess.swift */; };
 		F7D9905D1A368E7300368A0B /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7D9905C1A368E7300368A0B /* OnboardingViewController.swift */; };
 		F7DDE19F1A2D19310051E0E0 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7DDE19E1A2D19310051E0E0 /* SignUpViewController.swift */; };
 		F7E4F6511A49115E00C3A2D2 /* BusinessLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7E4F6501A49115E00C3A2D2 /* BusinessLoginViewController.swift */; };
@@ -61,26 +64,54 @@
 			remoteGlobalIDString = 2E4FEFDA19575BE100351305;
 			remoteInfo = SwiftyJSON;
 		};
-		F7710C551A5B2BAE0036795B /* PBXContainerItemProxy */ = {
+		F7737B9C1AB29CF400C9A974 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = F7FA85C41A5B283B00FCF4FF /* Alamofire.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = F8111E3219A95C8B0040E7D1;
-			remoteInfo = Alamofire;
-		};
-		F7FA85C91A5B283C00FCF4FF /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = F7FA85C41A5B283B00FCF4FF /* Alamofire.xcodeproj */;
+			containerPortal = F7737B951AB29CF400C9A974 /* Alamofire.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = F8111E3319A95C8B0040E7D1;
-			remoteInfo = Alamofire;
+			remoteInfo = "Alamofire iOS";
 		};
-		F7FA85CB1A5B283C00FCF4FF /* PBXContainerItemProxy */ = {
+		F7737B9E1AB29CF400C9A974 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = F7FA85C41A5B283B00FCF4FF /* Alamofire.xcodeproj */;
+			containerPortal = F7737B951AB29CF400C9A974 /* Alamofire.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 4DD67C0B1A5C55C900ED2280;
+			remoteInfo = "Alamofire OSX";
+		};
+		F7737BA01AB29CF400C9A974 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F7737B951AB29CF400C9A974 /* Alamofire.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = F8111E3E19A95C8B0040E7D1;
-			remoteInfo = AlamofireTests;
+			remoteInfo = "Alamofire iOS Tests";
+		};
+		F7737BA21AB29CF400C9A974 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F7737B951AB29CF400C9A974 /* Alamofire.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F829C6B21A7A94F100A2CD59;
+			remoteInfo = "Alamofire OSX Tests";
+		};
+		F7737BA61AB29D0300C9A974 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F7737B951AB29CF400C9A974 /* Alamofire.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = F8111E3219A95C8B0040E7D1;
+			remoteInfo = "Alamofire iOS";
+		};
+		F7857BC11A896D5100919E79 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F7FA85D41A5B296400FCF4FF /* SwiftyJSON.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 4EC1C1C91A0C1A2D0026ED0B;
+			remoteInfo = SwiftyJSONOSX;
+		};
+		F7857BC31A896D5100919E79 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F7FA85D41A5B296400FCF4FF /* SwiftyJSON.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 4EC1C1D31A0C1A2D0026ED0B;
+			remoteInfo = SwiftyJSONOSXTests;
 		};
 		F7FA85DD1A5B296500FCF4FF /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -106,7 +137,7 @@
 			dstSubfolderSpec = 10;
 			files = (
 				F7710C501A5B2BAE0036795B /* SwiftyJSON.framework in Embed Frameworks */,
-				F7710C541A5B2BAE0036795B /* Alamofire.framework in Embed Frameworks */,
+				F7737BA51AB29D0300C9A974 /* Alamofire.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -114,6 +145,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		F70F99EB1AA9651100C254CE /* Locksmith.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Locksmith.swift; sourceTree = "<group>"; };
+		F70F99EC1AA9651100C254CE /* LocksmithRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocksmithRequest.swift; sourceTree = "<group>"; };
 		F71688B11A5891F100F82EF2 /* AWSRuntime.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AWSRuntime.framework; sourceTree = "<group>"; };
 		F71688B21A5891F100F82EF2 /* AWSS3.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AWSS3.framework; sourceTree = "<group>"; };
 		F71688B31A5891F100F82EF2 /* BucketInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BucketInfo.swift; sourceTree = "<group>"; };
@@ -127,26 +160,28 @@
 		F72DBB081A28372A007441C6 /* EntryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EntryViewController.swift; sourceTree = "<group>"; };
 		F72DBB0E1A284194007441C6 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		F72DBB101A2848BF007441C6 /* TransitionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransitionManager.swift; sourceTree = "<group>"; };
-		F7328D541A2571FB002D1A98 /* udealio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = udealio.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F7328D541A2571FB002D1A98 /* brizby.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = brizby.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7328D581A2571FB002D1A98 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F7328D591A2571FB002D1A98 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F7328D5E1A2571FB002D1A98 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F7328D601A2571FB002D1A98 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		F7328D691A2571FB002D1A98 /* udealioTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = udealioTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F7328D691A2571FB002D1A98 /* brizbyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = brizbyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7328D6E1A2571FB002D1A98 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F7328D6F1A2571FB002D1A98 /* udealioTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = udealioTests.swift; sourceTree = "<group>"; };
+		F7328D6F1A2571FB002D1A98 /* brizbyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = brizbyTests.swift; sourceTree = "<group>"; };
 		F7328D811A25A9D0002D1A98 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		F7328D831A25A9F6002D1A98 /* DealsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DealsViewController.swift; sourceTree = "<group>"; };
 		F7328D871A25B34B002D1A98 /* TabViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabViewController.swift; sourceTree = "<group>"; };
 		F740CE7C1A2E8C4200C8B14D /* FloatLabelTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FloatLabelTextField.swift; sourceTree = "<group>"; };
 		F740CE7D1A2E8C4200C8B14D /* FloatLabelTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FloatLabelTextView.swift; sourceTree = "<group>"; };
+		F7482D911AAE930B006C3C20 /* APIManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
+		F7482D951AAE9CCA006C3C20 /* HTTPClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
 		F754D4BE1A55C67700AA6A1A /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		F7737B951AB29CF400C9A974 /* Alamofire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Alamofire.xcodeproj; path = "Alamofire-master/Alamofire.xcodeproj"; sourceTree = "<group>"; };
 		F78C881D1A26BCD900494B67 /* AlegreyaSans-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AlegreyaSans-Medium.otf"; sourceTree = "<group>"; };
 		F78C881E1A26BCD900494B67 /* AlegreyaSans-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AlegreyaSans-Regular.otf"; sourceTree = "<group>"; };
 		F78C88221A26C17100494B67 /* AlegreyaSansSC-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AlegreyaSansSC-Regular.otf"; sourceTree = "<group>"; };
 		F78C88251A26C18A00494B67 /* AlegreyaSansSC-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AlegreyaSansSC-Medium.otf"; sourceTree = "<group>"; };
 		F79B751F1A34DF6700DAEE4C /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
-		F7D2DF521A587C7400532271 /* KeyChainAccess.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyChainAccess.swift; sourceTree = "<group>"; };
 		F7D9905C1A368E7300368A0B /* OnboardingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		F7DDE19E1A2D19310051E0E0 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		F7E4F6501A49115E00C3A2D2 /* BusinessLoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BusinessLoginViewController.swift; sourceTree = "<group>"; };
@@ -154,7 +189,6 @@
 		F7EA50C71A5A0AED00351255 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
 		F7FA85BD1A5B1DAA00FCF4FF /* FeedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
 		F7FA85BF1A5B1DC200FCF4FF /* s3-2006-03-01.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "s3-2006-03-01.json"; sourceTree = "<group>"; };
-		F7FA85C41A5B283B00FCF4FF /* Alamofire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Alamofire.xcodeproj; path = Alamofire/Alamofire.xcodeproj; sourceTree = "<group>"; };
 		F7FA85D41A5B296400FCF4FF /* SwiftyJSON.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SwiftyJSON.xcodeproj; path = SwiftyJSON/SwiftyJSON.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -163,10 +197,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F7857BD01A89731800919E79 /* AWSRuntime.framework in Frameworks */,
 				F7710C4F1A5B2BAE0036795B /* SwiftyJSON.framework in Frameworks */,
 				F754D4BF1A55C67700AA6A1A /* Security.framework in Frameworks */,
-				F71688D11A5891F100F82EF2 /* AWSRuntime.framework in Frameworks */,
-				F7710C531A5B2BAE0036795B /* Alamofire.framework in Frameworks */,
+				F7737BA41AB29D0300C9A974 /* Alamofire.framework in Frameworks */,
 				F71688D21A5891F100F82EF2 /* AWSS3.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -186,6 +220,15 @@
 			children = (
 			);
 			name = "Business Main View";
+			sourceTree = "<group>";
+		};
+		F70F99EA1AA964FC00C254CE /* locksmith */ = {
+			isa = PBXGroup;
+			children = (
+				F70F99EB1AA9651100C254CE /* Locksmith.swift */,
+				F70F99EC1AA9651100C254CE /* LocksmithRequest.swift */,
+			);
+			name = locksmith;
 			sourceTree = "<group>";
 		};
 		F71688B01A5891F100F82EF2 /* S3Kit */ = {
@@ -240,11 +283,11 @@
 		F7328D4B1A2571FB002D1A98 = {
 			isa = PBXGroup;
 			children = (
+				F7737B951AB29CF400C9A974 /* Alamofire.xcodeproj */,
 				F7FA85D41A5B296400FCF4FF /* SwiftyJSON.xcodeproj */,
-				F7FA85C41A5B283B00FCF4FF /* Alamofire.xcodeproj */,
 				F754D4BE1A55C67700AA6A1A /* Security.framework */,
-				F7328D561A2571FB002D1A98 /* udealio */,
-				F7328D6C1A2571FB002D1A98 /* udealioTests */,
+				F7328D561A2571FB002D1A98 /* brizby */,
+				F7328D6C1A2571FB002D1A98 /* brizbyTests */,
 				F7328D551A2571FB002D1A98 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -252,15 +295,16 @@
 		F7328D551A2571FB002D1A98 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				F7328D541A2571FB002D1A98 /* udealio.app */,
-				F7328D691A2571FB002D1A98 /* udealioTests.xctest */,
+				F7328D541A2571FB002D1A98 /* brizby.app */,
+				F7328D691A2571FB002D1A98 /* brizbyTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		F7328D561A2571FB002D1A98 /* udealio */ = {
+		F7328D561A2571FB002D1A98 /* brizby */ = {
 			isa = PBXGroup;
 			children = (
+				F7482D8C1AAE92E9006C3C20 /* API */,
 				F71688B01A5891F100F82EF2 /* S3Kit */,
 				F79B751E1A34DDF800DAEE4C /* Models */,
 				F78C881C1A26BB7A00494B67 /* View Controllers */,
@@ -269,28 +313,30 @@
 				F78C881A1A26BB6200494B67 /* Resources */,
 				F7328D571A2571FB002D1A98 /* Supporting Files */,
 			);
+			name = brizby;
 			path = udealio;
 			sourceTree = "<group>";
 		};
 		F7328D571A2571FB002D1A98 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				F70F99EA1AA964FC00C254CE /* locksmith */,
 				F7FA85BF1A5B1DC200FCF4FF /* s3-2006-03-01.json */,
-				F7D2DF521A587C7400532271 /* KeyChainAccess.swift */,
 				F7EA50C71A5A0AED00351255 /* SwiftyJSON.swift */,
 				F7328D581A2571FB002D1A98 /* Info.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		F7328D6C1A2571FB002D1A98 /* udealioTests */ = {
+		F7328D6C1A2571FB002D1A98 /* brizbyTests */ = {
 			isa = PBXGroup;
 			children = (
-				F7328D6F1A2571FB002D1A98 /* udealioTests.swift */,
+				F7328D6F1A2571FB002D1A98 /* brizbyTests.swift */,
 				F7328D6D1A2571FB002D1A98 /* Supporting Files */,
 			);
+			name = brizbyTests;
 			path = udealioTests;
-			sourceTree = "<group>";
+			sourceTree = SOURCE_ROOT;
 		};
 		F7328D6D1A2571FB002D1A98 /* Supporting Files */ = {
 			isa = PBXGroup;
@@ -307,6 +353,27 @@
 				F740CE7D1A2E8C4200C8B14D /* FloatLabelTextView.swift */,
 			);
 			path = FloatLabelFields;
+			sourceTree = "<group>";
+		};
+		F7482D8C1AAE92E9006C3C20 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				F7482D911AAE930B006C3C20 /* APIManager.swift */,
+				F7482D951AAE9CCA006C3C20 /* HTTPClient.swift */,
+			);
+			name = API;
+			path = S3Kit;
+			sourceTree = "<group>";
+		};
+		F7737B961AB29CF400C9A974 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F7737B9D1AB29CF400C9A974 /* Alamofire.framework */,
+				F7737B9F1AB29CF400C9A974 /* Alamofire.framework */,
+				F7737BA11AB29CF400C9A974 /* Alamofire iOS Tests.xctest */,
+				F7737BA31AB29CF400C9A974 /* Alamofire OSX Tests.xctest */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 		F78C881A1A26BB6200494B67 /* Resources */ = {
@@ -341,20 +408,13 @@
 			name = Models;
 			sourceTree = "<group>";
 		};
-		F7FA85C51A5B283B00FCF4FF /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				F7FA85CA1A5B283C00FCF4FF /* Alamofire.framework */,
-				F7FA85CC1A5B283C00FCF4FF /* AlamofireTests.xctest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		F7FA85D51A5B296400FCF4FF /* Products */ = {
 			isa = PBXGroup;
 			children = (
 				F7FA85DE1A5B296500FCF4FF /* SwiftyJSON.framework */,
 				F7FA85E01A5B296500FCF4FF /* SwiftyJSONTests.xctest */,
+				F7857BC21A896D5100919E79 /* SwiftyJSON.framework */,
+				F7857BC41A896D5100919E79 /* SwiftyJSONOSXTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -362,9 +422,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		F7328D531A2571FB002D1A98 /* udealio */ = {
+		F7328D531A2571FB002D1A98 /* brizby */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F7328D731A2571FB002D1A98 /* Build configuration list for PBXNativeTarget "udealio" */;
+			buildConfigurationList = F7328D731A2571FB002D1A98 /* Build configuration list for PBXNativeTarget "brizby" */;
 			buildPhases = (
 				F7328D501A2571FB002D1A98 /* Sources */,
 				F7328D511A2571FB002D1A98 /* Frameworks */,
@@ -375,16 +435,16 @@
 			);
 			dependencies = (
 				F7710C521A5B2BAE0036795B /* PBXTargetDependency */,
-				F7710C561A5B2BAE0036795B /* PBXTargetDependency */,
+				F7737BA71AB29D0300C9A974 /* PBXTargetDependency */,
 			);
-			name = udealio;
+			name = brizby;
 			productName = udealio;
-			productReference = F7328D541A2571FB002D1A98 /* udealio.app */;
+			productReference = F7328D541A2571FB002D1A98 /* brizby.app */;
 			productType = "com.apple.product-type.application";
 		};
-		F7328D681A2571FB002D1A98 /* udealioTests */ = {
+		F7328D681A2571FB002D1A98 /* brizbyTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F7328D761A2571FB002D1A98 /* Build configuration list for PBXNativeTarget "udealioTests" */;
+			buildConfigurationList = F7328D761A2571FB002D1A98 /* Build configuration list for PBXNativeTarget "brizbyTests" */;
 			buildPhases = (
 				F7328D651A2571FB002D1A98 /* Sources */,
 				F7328D661A2571FB002D1A98 /* Frameworks */,
@@ -395,9 +455,9 @@
 			dependencies = (
 				F7328D6B1A2571FB002D1A98 /* PBXTargetDependency */,
 			);
-			name = udealioTests;
+			name = brizbyTests;
 			productName = udealioTests;
-			productReference = F7328D691A2571FB002D1A98 /* udealioTests.xctest */;
+			productReference = F7328D691A2571FB002D1A98 /* brizbyTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -419,7 +479,7 @@
 					};
 				};
 			};
-			buildConfigurationList = F7328D4F1A2571FB002D1A98 /* Build configuration list for PBXProject "udealio" */;
+			buildConfigurationList = F7328D4F1A2571FB002D1A98 /* Build configuration list for PBXProject "brizby" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -432,8 +492,8 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = F7FA85C51A5B283B00FCF4FF /* Products */;
-					ProjectRef = F7FA85C41A5B283B00FCF4FF /* Alamofire.xcodeproj */;
+					ProductGroup = F7737B961AB29CF400C9A974 /* Products */;
+					ProjectRef = F7737B951AB29CF400C9A974 /* Alamofire.xcodeproj */;
 				},
 				{
 					ProductGroup = F7FA85D51A5B296400FCF4FF /* Products */;
@@ -442,25 +502,53 @@
 			);
 			projectRoot = "";
 			targets = (
-				F7328D531A2571FB002D1A98 /* udealio */,
-				F7328D681A2571FB002D1A98 /* udealioTests */,
+				F7328D531A2571FB002D1A98 /* brizby */,
+				F7328D681A2571FB002D1A98 /* brizbyTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		F7FA85CA1A5B283C00FCF4FF /* Alamofire.framework */ = {
+		F7737B9D1AB29CF400C9A974 /* Alamofire.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
 			path = Alamofire.framework;
-			remoteRef = F7FA85C91A5B283C00FCF4FF /* PBXContainerItemProxy */;
+			remoteRef = F7737B9C1AB29CF400C9A974 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		F7FA85CC1A5B283C00FCF4FF /* AlamofireTests.xctest */ = {
+		F7737B9F1AB29CF400C9A974 /* Alamofire.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Alamofire.framework;
+			remoteRef = F7737B9E1AB29CF400C9A974 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		F7737BA11AB29CF400C9A974 /* Alamofire iOS Tests.xctest */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
-			path = AlamofireTests.xctest;
-			remoteRef = F7FA85CB1A5B283C00FCF4FF /* PBXContainerItemProxy */;
+			path = "Alamofire iOS Tests.xctest";
+			remoteRef = F7737BA01AB29CF400C9A974 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		F7737BA31AB29CF400C9A974 /* Alamofire OSX Tests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "Alamofire OSX Tests.xctest";
+			remoteRef = F7737BA21AB29CF400C9A974 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		F7857BC21A896D5100919E79 /* SwiftyJSON.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = SwiftyJSON.framework;
+			remoteRef = F7857BC11A896D5100919E79 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		F7857BC41A896D5100919E79 /* SwiftyJSONOSXTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = SwiftyJSONOSXTests.xctest;
+			remoteRef = F7857BC31A896D5100919E79 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 		F7FA85DE1A5B296500FCF4FF /* SwiftyJSON.framework */ = {
@@ -513,6 +601,7 @@
 				F7D9905D1A368E7300368A0B /* OnboardingViewController.swift in Sources */,
 				F72DBB111A2848BF007441C6 /* TransitionManager.swift in Sources */,
 				F7FA85BE1A5B1DAA00FCF4FF /* FeedViewController.swift in Sources */,
+				F70F99EE1AA9651100C254CE /* LocksmithRequest.swift in Sources */,
 				F72DBB0F1A284194007441C6 /* LoginViewController.swift in Sources */,
 				F7EA50C81A5A0AED00351255 /* SwiftyJSON.swift in Sources */,
 				F7E4F6571A49147400C3A2D2 /* Business.swift in Sources */,
@@ -520,6 +609,7 @@
 				F71688D51A5891F100F82EF2 /* S3Image.swift in Sources */,
 				F740CE7E1A2E8C4200C8B14D /* FloatLabelTextField.swift in Sources */,
 				F7328D821A25A9D0002D1A98 /* ProfileViewController.swift in Sources */,
+				F70F99ED1AA9651100C254CE /* Locksmith.swift in Sources */,
 				F71688D61A5891F100F82EF2 /* S3Wrapper.m in Sources */,
 				F7328D881A25B34B002D1A98 /* TabViewController.swift in Sources */,
 				F7DDE19F1A2D19310051E0E0 /* SignUpViewController.swift in Sources */,
@@ -527,8 +617,9 @@
 				F7E4F6511A49115E00C3A2D2 /* BusinessLoginViewController.swift in Sources */,
 				F740CE7F1A2E8C4200C8B14D /* FloatLabelTextView.swift in Sources */,
 				F7328D5A1A2571FB002D1A98 /* AppDelegate.swift in Sources */,
+				F7482D921AAE930B006C3C20 /* APIManager.swift in Sources */,
+				F7482D961AAE9CCA006C3C20 /* HTTPClient.swift in Sources */,
 				F72DBB091A28372A007441C6 /* EntryViewController.swift in Sources */,
-				F7D2DF531A587C7400532271 /* KeyChainAccess.swift in Sources */,
 				F71688D31A5891F100F82EF2 /* BucketInfo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -537,7 +628,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F7328D701A2571FB002D1A98 /* udealioTests.swift in Sources */,
+				F7328D701A2571FB002D1A98 /* brizbyTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -546,7 +637,7 @@
 /* Begin PBXTargetDependency section */
 		F7328D6B1A2571FB002D1A98 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = F7328D531A2571FB002D1A98 /* udealio */;
+			target = F7328D531A2571FB002D1A98 /* brizby */;
 			targetProxy = F7328D6A1A2571FB002D1A98 /* PBXContainerItemProxy */;
 		};
 		F7710C521A5B2BAE0036795B /* PBXTargetDependency */ = {
@@ -554,10 +645,10 @@
 			name = SwiftyJSON;
 			targetProxy = F7710C511A5B2BAE0036795B /* PBXContainerItemProxy */;
 		};
-		F7710C561A5B2BAE0036795B /* PBXTargetDependency */ = {
+		F7737BA71AB29D0300C9A974 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = Alamofire;
-			targetProxy = F7710C551A5B2BAE0036795B /* PBXContainerItemProxy */;
+			name = "Alamofire iOS";
+			targetProxy = F7737BA61AB29D0300C9A974 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -658,39 +749,14 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"/Users/kylenoble/Downloads/aws-ios-sdk-2.0.13/frameworks",
-					"/Users/kylenoble/Downloads/aws-ios-sdk-2.0.13/third-party",
-					"/Users/kylenoble/Downloads/Swift-218c439fa86006a681f35ec87f513accb47d4812/iOS",
-					8,
-					by,
-					Tutorials/Swift/Chapter,
-					13,
-					"-",
-					Extensions,
-					"-",
-					Document,
-					"Providers/Imgvue-Final/Imgvue/S3Kit",
-					"/Users/kylenoble/Downloads/Swift-218c439fa86006a681f35ec87f513accb47d4812/iOS",
-					8,
-					by,
-					Tutorials/Swift/Chapter,
-					13,
-					"-",
-					Extensions,
-					"-",
-					Document,
-					"Providers/Imgvue-Final/Imgvue/S3Kit",
-					"/Users/kylenoble/Downloads/aws-ios-sdk-2.0.13",
-					2/frameworks,
-					"/Users/kylenoble/Downloads/aws-ios-sdk-2.0.13",
-					3/frameworks,
+					"$(PROJECT_DIR)",
+					"/Users/kylenoble/Downloads/aws-ios-sdk-2.0.15/frameworks",
 					"$(PROJECT_DIR)/udealio/S3Kit",
 				);
 				INFOPLIST_FILE = udealio/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = brizby;
 				PROVISIONING_PROFILE = "";
 				SWIFT_INCLUDE_PATHS = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "udealio/S3Kit/S3Kit-Bridging-Header.h";
@@ -705,39 +771,14 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"/Users/kylenoble/Downloads/aws-ios-sdk-2.0.13/frameworks",
-					"/Users/kylenoble/Downloads/aws-ios-sdk-2.0.13/third-party",
-					"/Users/kylenoble/Downloads/Swift-218c439fa86006a681f35ec87f513accb47d4812/iOS",
-					8,
-					by,
-					Tutorials/Swift/Chapter,
-					13,
-					"-",
-					Extensions,
-					"-",
-					Document,
-					"Providers/Imgvue-Final/Imgvue/S3Kit",
-					"/Users/kylenoble/Downloads/Swift-218c439fa86006a681f35ec87f513accb47d4812/iOS",
-					8,
-					by,
-					Tutorials/Swift/Chapter,
-					13,
-					"-",
-					Extensions,
-					"-",
-					Document,
-					"Providers/Imgvue-Final/Imgvue/S3Kit",
-					"/Users/kylenoble/Downloads/aws-ios-sdk-2.0.13",
-					2/frameworks,
-					"/Users/kylenoble/Downloads/aws-ios-sdk-2.0.13",
-					3/frameworks,
+					"$(PROJECT_DIR)",
+					"/Users/kylenoble/Downloads/aws-ios-sdk-2.0.15/frameworks",
 					"$(PROJECT_DIR)/udealio/S3Kit",
 				);
 				INFOPLIST_FILE = udealio/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = brizby;
 				PROVISIONING_PROFILE = "";
 				SWIFT_INCLUDE_PATHS = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "udealio/S3Kit/S3Kit-Bridging-Header.h";
@@ -758,8 +799,8 @@
 				);
 				INFOPLIST_FILE = udealioTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/udealio.app/udealio";
+				PRODUCT_NAME = brizbyTests;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/brizby.app/brizby";
 			};
 			name = Debug;
 		};
@@ -773,15 +814,15 @@
 				);
 				INFOPLIST_FILE = udealioTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/udealio.app/udealio";
+				PRODUCT_NAME = brizbyTests;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/brizby.app/brizby";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		F7328D4F1A2571FB002D1A98 /* Build configuration list for PBXProject "udealio" */ = {
+		F7328D4F1A2571FB002D1A98 /* Build configuration list for PBXProject "brizby" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F7328D711A2571FB002D1A98 /* Debug */,
@@ -790,7 +831,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F7328D731A2571FB002D1A98 /* Build configuration list for PBXNativeTarget "udealio" */ = {
+		F7328D731A2571FB002D1A98 /* Build configuration list for PBXNativeTarget "brizby" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F7328D741A2571FB002D1A98 /* Debug */,
@@ -799,7 +840,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F7328D761A2571FB002D1A98 /* Build configuration list for PBXNativeTarget "udealioTests" */ = {
+		F7328D761A2571FB002D1A98 /* Build configuration list for PBXNativeTarget "brizbyTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F7328D771A2571FB002D1A98 /* Debug */,

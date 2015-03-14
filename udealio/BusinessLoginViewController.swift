@@ -237,15 +237,15 @@ class BusinessLoginViewController: UIViewController, UITextFieldDelegate {
           println(myJSON!["auth_token"])
           println(email)
           
-          NSUserDefaults.standardUserDefaults().setObject(token, forKey: kAuthTokenKey)
-          NSUserDefaults.standardUserDefaults().setObject(email, forKey: kEmailKey)
-          NSUserDefaults.standardUserDefaults().synchronize()
+          //NSUserDefaults.standardUserDefaults().setObject(token, forKey: kAuthTokenKey)
+          //NSUserDefaults.standardUserDefaults().setObject(email, forKey: kEmailKey)
+          //NSUserDefaults.standardUserDefaults().synchronize()
           
-          let emailSavedFromNSUserDefaults = NSUserDefaults.standardUserDefaults().objectForKey(kEmailKey) as? String
-          let authTokenSavedFromNSUserDefaults = NSUserDefaults.standardUserDefaults().objectForKey(kAuthTokenKey) as? String
+          //let emailSavedFromNSUserDefaults = NSUserDefaults.standardUserDefaults().objectForKey(kEmailKey) as? String
+          //let authTokenSavedFromNSUserDefaults = NSUserDefaults.standardUserDefaults().objectForKey(kAuthTokenKey) as? String
           
-          println(authTokenSavedFromNSUserDefaults)
-          println(emailSavedFromNSUserDefaults)
+          //println(authTokenSavedFromNSUserDefaults)
+          //println(emailSavedFromNSUserDefaults)
           
           println("segue")
           self.performSegueWithIdentifier("loginToBusinessDash", sender: nil)

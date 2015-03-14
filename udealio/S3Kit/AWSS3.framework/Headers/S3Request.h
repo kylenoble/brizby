@@ -17,9 +17,9 @@
 
 
 #ifdef AWS_MULTI_FRAMEWORK
-#import <AWSRuntime/AmazonSDKUtil.h>
-#import <AWSRuntime/AmazonAuthUtils.h>
-#import <AWSRuntime/AmazonServiceRequest.h>
+#import "../../../S3Kit/AWSRuntime.framework/Headers/AmazonSDKUtil.h"
+#import "../../../S3Kit/AWSRuntime.framework/Headers/AmazonAuthUtils.h"
+#import "../../../S3Kit/AWSRuntime.framework/Headers/AmazonServiceRequest.h"
 #else
 #import "../AmazonSDKUtil.h"
 #import "../AmazonAuthUtils.h"

@@ -17,8 +17,8 @@
 #import <CommonCrypto/CommonHMAC.h>
 
 #ifdef AWS_MULTI_FRAMEWORK
-#import <AWSRuntime/AmazonWebServiceClient.h>
-#import <AWSRuntime/AmazonSDKUtil.h>
+#import "../../../S3Kit/AWSRuntime.framework/Headers/AmazonWebServiceClient.h"
+#import "../../../S3Kit/AWSRuntime.framework/Headers/AmazonSDKUtil.h"
 #else
 #import "../AmazonWebServiceClient.h"
 #import "../AmazonSDKUtil.h"

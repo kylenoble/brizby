@@ -8,8 +8,8 @@
 
 import UIKit
 
-let kEmailKey = "emailKey"
-let kAuthTokenKey = "authTokenKey"
+let kLoginCount  = 0
+let kLoggedIn  = false
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {

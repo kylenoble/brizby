@@ -19,7 +19,7 @@
 #import "S3Request.h"
 
 #ifdef AWS_MULTI_FRAMEWORK
-#import <AWSRuntime/AmazonServiceResponse.h>
+#import "../../../S3Kit/AWSRuntime.framework/Headers//AmazonServiceResponse.h"
 #else
 #import "../AmazonServiceResponse.h"
 #endif

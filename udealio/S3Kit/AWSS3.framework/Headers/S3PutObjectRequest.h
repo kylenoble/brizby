@@ -16,7 +16,7 @@
 #import <Foundation/Foundation.h>
 
 #ifdef AWS_MULTI_FRAMEWORK
-#import <AWSRuntime/AmazonLogger.h>
+#import "../../../S3Kit/AWSRuntime.framework/Headers/AmazonLogger.h"
 #else
 #import "../AmazonLogger.h"
 #endif
