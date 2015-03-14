@@ -311,8 +311,7 @@
 				F78C881A1A26BB6200494B67 /* Resources */,
 				F7328D571A2571FB002D1A98 /* Supporting Files */,
 			);
-			name = brizby;
-			path = udealio;
+			path = brizby;
 			sourceTree = "<group>";
 		};
 		F7328D571A2571FB002D1A98 /* Supporting Files */ = {
@@ -332,8 +331,7 @@
 				F7328D6F1A2571FB002D1A98 /* brizbyTests.swift */,
 				F7328D6D1A2571FB002D1A98 /* Supporting Files */,
 			);
-			name = brizbyTests;
-			path = udealioTests;
+			path = brizbyTests;
 			sourceTree = SOURCE_ROOT;
 		};
 		F7328D6D1A2571FB002D1A98 /* Supporting Files */ = {
@@ -748,15 +746,15 @@
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(PROJECT_DIR)",
-					"$(PROJECT_DIR)/udealio/S3Kit",
+					"$(PROJECT_DIR)/brizby/S3Kit",
 				);
-				INFOPLIST_FILE = udealio/Info.plist;
+				INFOPLIST_FILE = brizby/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = brizby;
 				PROVISIONING_PROFILE = "";
 				SWIFT_INCLUDE_PATHS = "";
-				SWIFT_OBJC_BRIDGING_HEADER = "udealio/S3Kit/S3Kit-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "brizby/S3Kit/S3Kit-Bridging-Header.h";
 			};
 			name = Debug;
 		};
@@ -769,15 +767,15 @@
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(PROJECT_DIR)",
-					"$(PROJECT_DIR)/udealio/S3Kit",
+					"$(PROJECT_DIR)/brizby/S3Kit",
 				);
-				INFOPLIST_FILE = udealio/Info.plist;
+				INFOPLIST_FILE = brizby/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = brizby;
 				PROVISIONING_PROFILE = "";
 				SWIFT_INCLUDE_PATHS = "";
-				SWIFT_OBJC_BRIDGING_HEADER = "udealio/S3Kit/S3Kit-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "brizby/S3Kit/S3Kit-Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -793,7 +791,7 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = udealioTests/Info.plist;
+				INFOPLIST_FILE = brizbyTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = brizbyTests;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/brizby.app/brizby";
@@ -808,7 +806,7 @@
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = udealioTests/Info.plist;
+				INFOPLIST_FILE = brizbyTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = brizbyTests;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/brizby.app/brizby";
