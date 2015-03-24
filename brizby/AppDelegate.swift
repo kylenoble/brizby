@@ -8,8 +8,8 @@
 
 import UIKit
 
-let kLoginCount  = 0
-let kLoggedIn  = false
+let kUserId = "0"
+let kLoggedIn = "false"
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -18,6 +18,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        NSUserDefaults.standardUserDefaults().setObject("", forKey: "userId")
+        NSUserDefaults.standardUserDefaults().synchronize()
+
         return true
     }
 

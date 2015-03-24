@@ -9,11 +9,23 @@
 import UIKit
 import AlamoFire
 import SwiftyJSON
+import Foundation
 
-class ProfileViewController: UITableViewController {
+class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     let transitionManager = TransitionManager()
-    
+    var currentUserId: String = ""
+    var currentUser: User = User()
+
+    @IBOutlet weak var avatarImage: UIImageView!
+    @IBOutlet weak var headerImage: UIImageView!
+    @IBOutlet weak var userHomeCity: UILabel!
+    @IBOutlet weak var followButton: UIButton!
+    @IBOutlet weak var followersButton: UIButton!
+    @IBOutlet weak var followingButton: UIButton!
+
+    @IBOutlet weak var tableView: UITableView!
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -22,8 +34,25 @@ class ProfileViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
-        self.navigationItem.title = "User Name"
-        
+
+        let tabView = self.tabBarController as TabViewController
+
+        println(Defaults[kUserId].string)
+        println(NSUserDefaults.standardUserDefaults().objectForKey(kUserId) as Int)
+
+        let currentUserId = NSUserDefaults.standardUserDefaults().objectForKey(kUserId) as Int
+
+        self.currentUser.userId = currentUserId
+
+
+        println(currentUser.userId)
+        getUserdata("\(currentUser.userId)")
+
+        tableView.delegate = self
+        tableView.dataSource = self
+
+        self.headerImage.backgroundColor = UIColor.blackColor()
+
     }
 
     override func didReceiveMemoryWarning() {
@@ -39,20 +68,7 @@ class ProfileViewController: UITableViewController {
     override func preferredStatusBarStyle() -> UIStatusBarStyle {
         return UIStatusBarStyle.LightContent
     }
-    
-    // MARK: - Table view data source
 
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        // #warning Potentially incomplete method implementation.
-        // Return the number of sections.
-        return 0
-    }
-
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete method implementation.
-        // Return the number of rows in the section.
-        return 0
-    }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         
@@ -64,13 +80,65 @@ class ProfileViewController: UITableViewController {
         toViewController.transitioningDelegate = self.transitionManager
         
     }
+
+    func getUserdata(userId: String) {
+        var msg = ""
+        var alert = UIAlertView(title: "Success!", message: msg, delegate: nil, cancelButtonTitle: "Okay.")
+
+        Alamofire.request(APIManager.Router.ReadUser(id: userId))
+            .responseJSON { (_, _, JSON, error) in
+
+            var myJSON: SwiftyJSON.JSON?
+
+            if error == nil && JSON != nil {
+                myJSON = SwiftyJSON.JSON(JSON!)
+            } else {
+                alert.title = "Error"
+                alert.message = "\(error)"
+                alert.show()
+            }
+            let name = myJSON?["name"].string
+            let homeCity = myJSON?["home_city"].string
+            let following = myJSON?["following"].int
+            let followers = myJSON?["followers"].int
+            let avatar = myJSON?["avatar"].string
+
+            var avatarUrl:NSURL = NSURL(string: avatar!)!
+            var err: NSError?
+            var imageData :NSData = NSData(contentsOfURL:avatarUrl,options: NSDataReadingOptions.DataReadingMappedIfSafe, error: &err)!
+
+            self.userHomeCity.text = homeCity
+            self.followersButton.setTitle("Followers \(followers!)", forState: UIControlState.Normal)
+            self.followingButton.setTitle("Following \(following!)", forState: UIControlState.Normal)
+            self.navigationItem.title = name
+
+            dispatch_async(dispatch_get_global_queue(Int(QOS_CLASS_USER_INITIATED.value), 0)) {
+                let avatarImageData = UIImage(data:imageData)
+                dispatch_async(dispatch_get_main_queue()) {
+                    self.avatarImage.image = self.maskRoundedImage(avatarImageData!, radius: 150.0)
+                }
+            }
+
+        }
+
+    }
     
     @IBAction func logOutButtonPressed(sender: UIButton) {
         var msg = ""
         var alert = UIAlertView(title: "Success!", message: msg, delegate: nil, cancelButtonTitle: "Okay.")
-        
-        var myJSON: SwiftyJSON.JSON?
-        APIManager.sharedInstance.signOut("user") { myJSON, error in
+
+        Alamofire.request(APIManager.Router.Logout())
+            .responseJSON { (_, _, JSON, error) in
+
+            var myJSON: SwiftyJSON.JSON?
+
+            if error == nil && JSON != nil {
+                myJSON = SwiftyJSON.JSON(JSON!)
+            } else {
+                alert.title = "Error"
+                alert.message = "\(error)"
+                alert.show()
+            }
 
             if let message = myJSON?["message"] {
                 if message == "Logged out successfully." {
@@ -89,16 +157,34 @@ class ProfileViewController: UITableViewController {
             }
         }
     }
-    
-    /*
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath) as UITableViewCell
 
-        // Configure the cell...
-
-        return cell
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 0
     }
-    */
+
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        return UITableViewCell()
+    }
+
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        
+    }
+
+    func maskRoundedImage(image: UIImage, radius: Float) -> UIImage {
+        var imageView: UIImageView = UIImageView(image: image)
+        var layer: CALayer = CALayer()
+        layer = imageView.layer
+
+        layer.masksToBounds = true
+        layer.cornerRadius = CGFloat(radius)
+
+        UIGraphicsBeginImageContext(imageView.bounds.size)
+        layer.renderInContext(UIGraphicsGetCurrentContext())
+        var roundedImage = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        
+        return roundedImage
+    }
 
     /*
     // Override to support conditional editing of the table view.

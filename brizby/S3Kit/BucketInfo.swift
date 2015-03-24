@@ -26,7 +26,7 @@ import UIKit
 
 let ACCESS_KEY_ID = "AKIAIQ223NVRAMUNXQCQ"
 let SECRET_KEY = "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"
-let BUCKET_NAME = "brizby"
+let BUCKET_NAME = "brztst"
 
 public class BucketInfo {
   var files : [S3Image] = []

@@ -9,6 +9,7 @@
 import UIKit
 
 class TabViewController: UITabBarController {
+    let defaultUser = User()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,6 +25,8 @@ class TabViewController: UITabBarController {
         item2.selectedImage = UIImage(named: "PFill")
         item3.selectedImage = UIImage(named: "DealFill")
         item4.selectedImage = UIImage(named: "MapFill")
+
+        //defaultUser.userId =
     }
 
 

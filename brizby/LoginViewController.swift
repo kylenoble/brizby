@@ -16,6 +16,7 @@ enum PhoneSize: CGFloat {
 import UIKit
 import Alamofire
 import SwiftyJSON
+import Foundation
 
 class LoginViewController: UIViewController, UITextFieldDelegate {
 
@@ -24,7 +25,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var innerView: UIView!
 
-    @IBOutlet weak var usernameTextInputField: UITextField!
+    @IBOutlet weak var emailTextInputField: UITextField!
     @IBOutlet weak var passwordTextInputField: UITextField!
     @IBOutlet weak var twitterLoginButton: UIButton!
     @IBOutlet weak var facebookLoginButton: UIButton!
@@ -45,29 +46,29 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
 
         // Do any additional setup after loading the view.
 
-        usernameTextInputField.delegate = self
+        emailTextInputField.delegate = self
         passwordTextInputField.delegate = self
 
-        usernameAnchor = self.usernameTextInputField.center.y - 18
+        usernameAnchor = self.emailTextInputField.center.y - 18
         passwordAnchor = self.passwordTextInputField.center.y - 21
 
         switch PhoneSize(rawValue: UIScreen.mainScreen().bounds.height)! {
         case .Four:
             self.backgroundImage.image = UIImage(named: "LoginBG4S")
             self.loginTitleLabel.font = UIFont(name: "Alegreya Sans SC", size: 25.0)
-            addBottomBorder(usernameTextInputField, widthSize: 5.5, yAdjust: 1.5)
+            addBottomBorder(emailTextInputField, widthSize: 5.5, yAdjust: 1.5)
             addBottomBorder(passwordTextInputField, widthSize: 5.0, yAdjust: 1.5)
             self.loginTitleLabel.font = UIFont(name: "Alegreya Sans SC", size: 25.0)
-            self.usernameTextInputField.font = UIFont(name: "Alegreya Sans", size: 17.0)
+            self.emailTextInputField.font = UIFont(name: "Alegreya Sans", size: 17.0)
             self.passwordTextInputField.font = UIFont(name: "Alegreya Sans", size: 17.0)
         case .Five:
-            addBottomBorder(usernameTextInputField, widthSize: 2.5, yAdjust: 1.5)
+            addBottomBorder(emailTextInputField, widthSize: 2.5, yAdjust: 1.5)
             addBottomBorder(passwordTextInputField, widthSize: 2.0, yAdjust: 1.5)
         case .SixPlus:
-            addBottomBorder(usernameTextInputField, widthSize: 2.0, yAdjust: 8.5)
+            addBottomBorder(emailTextInputField, widthSize: 2.0, yAdjust: 8.5)
             addBottomBorder(passwordTextInputField, widthSize: 2.0, yAdjust: 10.5)
         default:
-            addBottomBorder(usernameTextInputField, widthSize: 2.5, yAdjust: 6.5)
+            addBottomBorder(emailTextInputField, widthSize: 2.5, yAdjust: 6.5)
             addBottomBorder(passwordTextInputField, widthSize: 2.5, yAdjust: 6.5)
         }
 
@@ -87,7 +88,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         addOneSidedRounding(self.facebookLoginButton, color: UIColor(red:59/255, green:89/255, blue:152/255, alpha:1.0), direction: "right")
 
         let attributesDictionary = [NSForegroundColorAttributeName: UIColor.whiteColor()]
-        usernameTextInputField.attributedPlaceholder = NSAttributedString(string: "Username", attributes: attributesDictionary)
+        emailTextInputField.attributedPlaceholder = NSAttributedString(string: "Username", attributes: attributesDictionary)
         passwordTextInputField.attributedPlaceholder = NSAttributedString(string: "Password", attributes: attributesDictionary)
 
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "keyboardWillShow:", name: UIKeyboardWillShowNotification, object: nil)
@@ -149,7 +150,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         var targetPointOffset: CGFloat = targetTextFieldLowerPoint.y - textFieldLowerPoint.y
         if textFieldLowerPoint.y + kPreferredTextFieldToKeyboardOffset > self.keyboardFrame.origin.y {
             UIView.animateWithDuration(0.2, animations:  {
-                self.usernameTextInputField.frame.origin.y -= (targetPointOffset * -1)
+                self.emailTextInputField.frame.origin.y -= (targetPointOffset * -1)
                 self.passwordTextInputField.frame.origin.y -= (targetPointOffset * -1)
             })
         }
@@ -158,7 +159,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     func returnViewToInitialFrame()
     {
         UIView.animateWithDuration(0.2, animations:  {
-            self.usernameTextInputField.center.y = self.usernameAnchor
+            self.emailTextInputField.center.y = self.usernameAnchor
             self.passwordTextInputField.center.y = self.passwordAnchor
         })
     }
@@ -182,7 +183,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         if textField == self.passwordTextInputField {
             textField.resignFirstResponder()
         }
-        else if textField == self.usernameTextInputField {
+        else if textField == self.emailTextInputField {
             self.passwordTextInputField.becomeFirstResponder()
         }
         return true
@@ -226,7 +227,27 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
 
         var alert = UIAlertView(title: "Success!", message: msg, delegate: nil, cancelButtonTitle: "Okay.")
 
-        APIManager.sharedInstance.signIn(usernameTextInputField.text, password: passwordTextInputField.text, type: "user") { myJSON, error in
+        let parameters = [
+            "api_v1_user": [
+                "email": "\(emailTextInputField.text)",
+                "password": "\(passwordTextInputField.text)"
+            ]
+        ]
+
+        Alamofire.request(APIManager.Router.Login(params: parameters))
+            .responseJSON { (_, _, JSON, error) in
+
+            var myJSON: SwiftyJSON.JSON?
+
+            if error == nil && JSON != nil {
+                myJSON = SwiftyJSON.JSON(JSON!)
+            } else {
+                spinner.stopAnimating()
+                alert.title = "Error"
+                alert.message = "\(error)"
+                alert.show()
+                return
+            }
 
             if let message = myJSON?["message"] {
                 if message == "Logged in" {
@@ -236,14 +257,25 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
                     var email_error: NSError?
                     var auth_error: NSError?
 
-                    let token = myJSON?["auth_token"].string
-                    let email = myJSON?["email"].string
+                    let token = myJSON!["auth_token"].string
+                    let email = myJSON!["email"].string
+                    let id = myJSON!["id"].int
 
                     Locksmith.saveData(["email": "\(email)"], forUserAccount: "Email_Token", inService: "KeyChainService")
                     Locksmith.saveData(["auth_token": "\(token)"], forUserAccount: "Auth_Token", inService: "KeyChainService")
 
-                    NSUserDefaults.standardUserDefaults().setObject(true, forKey: "userLoggedIn")
+                    println(myJSON)
+                    println(email)
+                    println(token)
+                    println(id)
+
+                    NSUserDefaults.standardUserDefaults().setObject("true", forKey: kLoggedIn)
+                    NSUserDefaults.standardUserDefaults().setInteger(id!, forKey: kUserId)
+
                     NSUserDefaults.standardUserDefaults().synchronize()
+
+                    println(Defaults[kUserId].int)
+                    println(NSUserDefaults.standardUserDefaults().objectForKey(kUserId) as Int)
 
                     self.performSegueWithIdentifier("loginToHomeView", sender: nil)
                 }
@@ -290,13 +322,13 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         textField.layer.addSublayer(border)
         textField.layer.masksToBounds = true
     }
-    
+
     func addOneSidedRounding(button:UIButton, color:UIColor, direction:String) {
         var newButton:CGRect
         var shapePath:UIBezierPath
         var xValue:CGFloat
-        
-        
+
+
         switch PhoneSize(rawValue: UIScreen.mainScreen().bounds.height)! {
         case .Six:
             xValue = button.bounds.size.width * 2 - 16
@@ -305,7 +337,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         default:
             xValue = button.bounds.size.width + 16
         }
-        
+
         if direction == "left" {
             newButton = CGRect(x: xValue, y: 0, width: 20, height: 40)
             shapePath = UIBezierPath(roundedRect: newButton, byRoundingCorners: UIRectCorner.AllCorners, cornerRadii: CGSizeMake(0.0, 0.0))

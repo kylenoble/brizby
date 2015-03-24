@@ -27,6 +27,7 @@
 		F7328D881A25B34B002D1A98 /* TabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7328D871A25B34B002D1A98 /* TabViewController.swift */; };
 		F740CE7E1A2E8C4200C8B14D /* FloatLabelTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = F740CE7C1A2E8C4200C8B14D /* FloatLabelTextField.swift */; };
 		F740CE7F1A2E8C4200C8B14D /* FloatLabelTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F740CE7D1A2E8C4200C8B14D /* FloatLabelTextView.swift */; };
+		F746FDF51AB9224900FC9FBF /* SwiftyUserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = F746FDF41AB9224900FC9FBF /* SwiftyUserDefaults.swift */; };
 		F7482D921AAE930B006C3C20 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7482D911AAE930B006C3C20 /* APIManager.swift */; };
 		F7482D961AAE9CCA006C3C20 /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7482D951AAE9CCA006C3C20 /* HTTPClient.swift */; };
 		F754D4BF1A55C67700AA6A1A /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F754D4BE1A55C67700AA6A1A /* Security.framework */; };
@@ -63,20 +64,6 @@
 			remoteGlobalIDString = 2E4FEFDA19575BE100351305;
 			remoteInfo = SwiftyJSON;
 		};
-		F7857BC11A896D5100919E79 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = F7FA85D41A5B296400FCF4FF /* SwiftyJSON.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 4EC1C1C91A0C1A2D0026ED0B;
-			remoteInfo = SwiftyJSONOSX;
-		};
-		F7857BC31A896D5100919E79 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = F7FA85D41A5B296400FCF4FF /* SwiftyJSON.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 4EC1C1D31A0C1A2D0026ED0B;
-			remoteInfo = SwiftyJSONOSXTests;
-		};
 		F78AEBC21AB4AF5C0006FADD /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = F78AEBBB1AB4AF5B0006FADD /* Alamofire.xcodeproj */;
@@ -111,6 +98,20 @@
 			proxyType = 1;
 			remoteGlobalIDString = F8111E3219A95C8B0040E7D1;
 			remoteInfo = "Alamofire iOS";
+		};
+		F7D92DA51AB7D4C700370145 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F7FA85D41A5B296400FCF4FF /* SwiftyJSON.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 9C7DFC5B1A9102BD005AA3F7;
+			remoteInfo = "SwiftyJSON OSX";
+		};
+		F7D92DA71AB7D4C700370145 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F7FA85D41A5B296400FCF4FF /* SwiftyJSON.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 9C7DFC651A9102BD005AA3F7;
+			remoteInfo = "SwiftyJSON OSX Tests";
 		};
 		F7FA85DD1A5B296500FCF4FF /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -172,6 +173,7 @@
 		F7328D871A25B34B002D1A98 /* TabViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabViewController.swift; sourceTree = "<group>"; };
 		F740CE7C1A2E8C4200C8B14D /* FloatLabelTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FloatLabelTextField.swift; sourceTree = "<group>"; };
 		F740CE7D1A2E8C4200C8B14D /* FloatLabelTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FloatLabelTextView.swift; sourceTree = "<group>"; };
+		F746FDF41AB9224900FC9FBF /* SwiftyUserDefaults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyUserDefaults.swift; sourceTree = "<group>"; };
 		F7482D911AAE930B006C3C20 /* APIManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 		F7482D951AAE9CCA006C3C20 /* HTTPClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
 		F754D4BE1A55C67700AA6A1A /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
@@ -319,6 +321,7 @@
 			children = (
 				F70F99EA1AA964FC00C254CE /* locksmith */,
 				F7FA85BF1A5B1DC200FCF4FF /* s3-2006-03-01.json */,
+				F746FDF41AB9224900FC9FBF /* SwiftyUserDefaults.swift */,
 				F7EA50C71A5A0AED00351255 /* SwiftyJSON.swift */,
 				F7328D581A2571FB002D1A98 /* Info.plist */,
 			);
@@ -408,9 +411,9 @@
 			isa = PBXGroup;
 			children = (
 				F7FA85DE1A5B296500FCF4FF /* SwiftyJSON.framework */,
-				F7FA85E01A5B296500FCF4FF /* SwiftyJSONTests.xctest */,
-				F7857BC21A896D5100919E79 /* SwiftyJSON.framework */,
-				F7857BC41A896D5100919E79 /* SwiftyJSONOSXTests.xctest */,
+				F7FA85E01A5B296500FCF4FF /* SwiftyJSON iOS Tests.xctest */,
+				F7D92DA61AB7D4C700370145 /* SwiftyJSON.framework */,
+				F7D92DA81AB7D4C700370145 /* SwiftyJSON OSX Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -505,20 +508,6 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		F7857BC21A896D5100919E79 /* SwiftyJSON.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = SwiftyJSON.framework;
-			remoteRef = F7857BC11A896D5100919E79 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		F7857BC41A896D5100919E79 /* SwiftyJSONOSXTests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = SwiftyJSONOSXTests.xctest;
-			remoteRef = F7857BC31A896D5100919E79 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
 		F78AEBC31AB4AF5C0006FADD /* Alamofire.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
@@ -547,6 +536,20 @@
 			remoteRef = F78AEBC81AB4AF5C0006FADD /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
+		F7D92DA61AB7D4C700370145 /* SwiftyJSON.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = SwiftyJSON.framework;
+			remoteRef = F7D92DA51AB7D4C700370145 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		F7D92DA81AB7D4C700370145 /* SwiftyJSON OSX Tests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "SwiftyJSON OSX Tests.xctest";
+			remoteRef = F7D92DA71AB7D4C700370145 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 		F7FA85DE1A5B296500FCF4FF /* SwiftyJSON.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
@@ -554,10 +557,10 @@
 			remoteRef = F7FA85DD1A5B296500FCF4FF /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		F7FA85E01A5B296500FCF4FF /* SwiftyJSONTests.xctest */ = {
+		F7FA85E01A5B296500FCF4FF /* SwiftyJSON iOS Tests.xctest */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
-			path = SwiftyJSONTests.xctest;
+			path = "SwiftyJSON iOS Tests.xctest";
 			remoteRef = F7FA85DF1A5B296500FCF4FF /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
@@ -602,6 +605,7 @@
 				F7EA50C81A5A0AED00351255 /* SwiftyJSON.swift in Sources */,
 				F7E4F6571A49147400C3A2D2 /* Business.swift in Sources */,
 				F7328D841A25A9F6002D1A98 /* DealsViewController.swift in Sources */,
+				F746FDF51AB9224900FC9FBF /* SwiftyUserDefaults.swift in Sources */,
 				F71688D51A5891F100F82EF2 /* S3Image.swift in Sources */,
 				F740CE7E1A2E8C4200C8B14D /* FloatLabelTextField.swift in Sources */,
 				F7328D821A25A9D0002D1A98 /* ProfileViewController.swift in Sources */,
@@ -749,7 +753,7 @@
 					"$(PROJECT_DIR)/brizby/S3Kit",
 				);
 				INFOPLIST_FILE = brizby/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = brizby;
 				PROVISIONING_PROFILE = "";
@@ -770,7 +774,7 @@
 					"$(PROJECT_DIR)/brizby/S3Kit",
 				);
 				INFOPLIST_FILE = brizby/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = brizby;
 				PROVISIONING_PROFILE = "";
